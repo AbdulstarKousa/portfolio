@@ -1,2 +1,2 @@
+# Enhance the sub-pages: Add a click to go back home and organize the sub-pages layout and learn more links.
 # Add more projects
-# Add a click to go back home and organize the sub pages 
