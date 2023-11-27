@@ -69,7 +69,7 @@
             <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
         </a>
         
-        <div class="w3-right w3-hide-medium w3-hide-large">
+        <div class="w3-right w3-hide-medium w3-hide-large" id="navbarLinks">
             <!-- Add a responsive navigation button -->
             <a href="javascript:void(0);" class="w3-bar-item w3-button" onclick="toggleNavbar()">
                 <i class="fa fa-bars"></i>
@@ -120,7 +120,7 @@
     <!-- JavaScript to toggle the navigation links for small screens -->
     <script>
         function toggleNavbar() {
-            var x = document.querySelector(".w3-right.w3-hide-small");
+            var x = document.getElementById("navbarLinks");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
