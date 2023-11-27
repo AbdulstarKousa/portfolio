@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Abdul Kousa</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .w3-card-4 {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .w3-card-4 img {
+            flex: 1;
+            width:40%;
+            height: auto;
+            max-height: none; 
+        }
+
+        /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+        @media (max-width: 768px) {
+            /* Change the flex-direction to column for smaller screens (e.g., mobile) */
+            .w3-card-4 {
+                flex-direction: column;
+            }
+
+            /* Adjust image size for mobile devices */
+            .w3-card-4 img {
+                width: 100%; /* Make the image take the full width of the card */
+                height: auto; /* Maintain aspect ratio */
+                max-width: none; /* Disable max-width on the image */
+            }
+        }
+
+
+        .w3-container {
+            flex: 2;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .highlighted-text {
+            font-size: 17.5px;
+            color: #0d8f38;
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+   <!-- Navigation Bar -->
+   <div class="w3-top w3-bar w3-dark-grey w3-card">
+        <a class="w3-bar-item w3-button" href="../index.html">
+            <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
+        </a>
+        <div class="w3-right w3-hide-small">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="../index.html#projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
+        </div>
+    </div>
+    
+    <!-- About Me Section -->
+    <div class="w3-content" style="max-width: 800px; margin-top: 70px;">
+        <div class="w3-card-4">
+            <!-- Image -->
+            <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa">
+            <div class="w3-container">
+                <!-- About Me Text -->
+                <h2>About Me</h2>
+                <p>Welcome to my personal space! I am Abdul Kousa, a passionate data science enthusiast with a keen interest in exploring and modeling complex patterns in data. 
+                   I recently completed my MSc in Mathematical Modelling and Computation with a specialization in Data Science - Big Data from from the Technical University of Denmark. 
+                   My academic journey has equipped me with a strong foundation in machine learning, data analysis, and the practical application of data science.
+                   My journey has led me to projects involving machine learning, AI, data analysis, and the practical application of data science.         
+                   </p>
+                <!-- Add more about yourself as needed -->
+                <!-- Contact Info -->
+                <h2>Contact Information</h2>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a></a></p>
+                <p><i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a></p>
+                <p><i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
+    </footer>
+
+    <!-- Script for the year -->
+    <script>
+        // JavaScript code to update the year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
