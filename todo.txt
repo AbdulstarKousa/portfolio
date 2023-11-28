@@ -1,4 +1,4 @@
 # Add more projects
-# Add to the key findings
+# Add key findings
 # gif homepage like https://www.ahmedbesbes.com/
 # tabs toggles on small screen (see the <!--w3-hide-small--> comments)
