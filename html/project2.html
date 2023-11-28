@@ -44,6 +44,15 @@
             color: #0d8f38;
         }
 
+        .contact-links {
+            margin-top: 10px;
+        }
+
+        .contact-links a {
+            margin: 0 10px;
+            color: #f1f1f1;
+        }
+
     </style>
 </head>
 
@@ -90,6 +99,24 @@
         <p style="text-align: left;"><strong>Learn More:</strong></p>
         <p style="text-align: left;">For a comprehensive exploration of this project, including methodologies, code, detailed results, and potential future directions, please refer <a href="https://bit.ly/Abdul-MobileAppUsageChange">here</a>.</p>
     </header>
-</body>
 
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top">
+        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
+
+        <!-- Contacts -->
+        <div class="contact-links">
+            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a> |
+            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a> |
+            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
+        </div>
+    </footer>
+    
+    <!-- Script for the year -->
+    <script>
+        // JavaScript code to update the year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+</body>
 </html>
