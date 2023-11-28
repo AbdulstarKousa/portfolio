@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Abdul Kousa Portfolio</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -31,6 +32,42 @@
             max-height: none; 
         }
 
+        .w3-container {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .highlighted-text {
+            font-size: 17.5px; /* Adjust the font size as needed */
+            color: #0d8f38; /* Change the text color to a contrasting color */
+        }
+
+        .typing-container {
+            height: 20px; /* Set a reasonable fixed height for the container */
+        }
+
+        .header-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .profile-image {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .contact-links {
+            margin-top: 10px;
+        }
+
+        .contact-links a {
+            margin: 0 10px;
+            color: #333;
+        }
+
+        .tagline {
+            margin-top: 20px;
+        }
 
         /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
         @media (max-width: 768px) {
@@ -45,17 +82,6 @@
                 height: auto; /* Maintain aspect ratio */
                 max-width: none; /* Disable max-width on the image */
             }
-        }
-
-
-        .w3-container {
-            flex: 2;
-            padding: 20px;
-        }
-
-        .highlighted-text {
-            font-size: 17.5px; /* Adjust the font size as needed */
-            color: #0d8f38; /* Change the text color to a contrasting color */
         }
 
     </style>
@@ -78,13 +104,18 @@
     </div>
 
     <!-- Header -->
-    <header id="aboutme" class="w3-container w3-center w3-padding-32" style="margin-top: 50px;">
-        <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 150px; border-radius: 50%;">      
+    <header id="aboutme" class="w3-container header-container w3-padding-32">
+        <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" class="profile-image">      
         <h1><b>Abdul Kousa</b></h1>
-
-        <p><span class="highlighted-text">Adaptable and Analytical Data Science Enthusiast</span></p>
-        <p><i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a> | <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a> | <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a> </p>
-        <p>Welcome to my <span class="w3-tag">data science</span> portfolio</p>        
+        <div class="contact-links">
+            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a> |
+            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a> |
+            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
+        </div>
+        <p class="tagline">Welcome to my <span class="w3-tag">data science</span> portfolio</p>
+        <div class="typing-container">
+            <p id="typing-text"></p>
+        </div>
     </header>
 
     <!-- Blog entries -->
@@ -215,6 +246,24 @@
     <script>
         // JavaScript code to update the year
         document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Script for the typing -->
+    <script>
+        // Initialize typed.js
+        var options = {
+            strings: ["I'm a Data Scientist", "Passionate about data", "Analyzing trends", "Building models",""],
+            typeSpeed: 50, // typing speed in milliseconds
+            backSpeed: 25, // backspacing speed in milliseconds
+            backDelay: 1500, // delay before starting to backspace
+            showCursor: false, // show blinking cursor
+            cursorChar: "|", // cursor character
+            onComplete: function (self) {
+                // Reset the Typed instance to start again
+                self.reset();
+            },
+        };
+        var typed = new Typed("#typing-text", options);
     </script>
 
 </body>
