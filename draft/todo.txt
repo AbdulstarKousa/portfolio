@@ -1,36 +1,9 @@
+# Merge home with profile picture
+# Make use of thumbnails pics
 # Add more projects
-# Add key findings
-# tabs toggles on small screen (see the <!--w3-hide-small--> comments)
-# download button
-# see https://www.ahmedbesbes.com/
-
-# old header
-<header id="aboutme" class="w3-container w3-center w3-padding-32" style="margin-top: 50px;">
-    <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 150px; border-radius: 50%;">      
-    <h1><b>Abdul Kousa</b></h1>
-    <p><i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a> | <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a> | <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a> </p>
-    <p>Welcome to my <span class="w3-tag">data science</span> portfolio</p>            
-    <div class="typing-container">
-        <p id="typing-text"></p>
-    </div>
-</header>
-
-# space
-&nbsp; Abdul Kousa
-
-
-# contacts
-.contact-links {
-    margin-top: 10px;
-}
-
-.contact-links a {
-    margin: 0 10px;
-    color: #333;
-}
-
-<div class="contact-links">
-    <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a> |
-    <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a> |
-    <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
-</div>
+# Add articles sections
+# Add key findings to each project
+# Tabs toggles on small screen (see the <!--w3-hide-small--> comments)
+# Download cv button
+# See https://www.ahmedbesbes.com/
+# See https://skaftenicki.github.io/
