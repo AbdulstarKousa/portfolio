@@ -1,9 +1,12 @@
-# Merge home with profile picture
 # Make use of thumbnails pics
-# Add more projects
-# Add articles sections
-# Add key findings to each project
-# Tabs toggles on small screen (see the <!--w3-hide-small--> comments)
 # Download cv button
+# Add key findings to each project
+
+# Add more projects: SG + Hospital + SurePlay 
+# Add articles sections: Python Notes
+
+# Tabs toggles on small screen (see the <!--w3-hide-small--> comments)
+# Merge home with profile picture
+
 # See https://www.ahmedbesbes.com/
 # See https://skaftenicki.github.io/
