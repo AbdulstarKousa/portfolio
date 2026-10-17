@@ -1,248 +1,278 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8fafc">
-  <meta name="description" content="Abdul Kousa is an AI & Data Consultant based in Copenhagen, working across data science, applied AI and real-world business problems.">
-  <link rel="canonical" href="https://www.abdulkousa.com/">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Abdul Kousa | AI & Data Consultant</title>
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Abdul Kousa | AI & Data Consultant">
-  <meta property="og:description" content="Connecting data, applied AI, and real-world business problems.">
-  <meta property="og:url" content="https://www.abdulkousa.com/">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --ink: #111827;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --accent: #2563eb;
-      --accent-soft: #eff6ff;
-      --radius: 18px;
-      --content: 1080px;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; }
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: var(--accent); }
-    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
-    img { max-width: 100%; height: auto; display: block; }
-    h1, h2, h3, p { margin-top: 0; }
-    .container { width: min(calc(100% - 48px), var(--content)); margin-inline: auto; }
-    .site-header { background: rgba(248,250,252,.96); border-bottom: 1px solid var(--line); }
-    .navigation { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .logo { font-size: 1.14rem; font-weight: 800; letter-spacing: -0.045em; white-space: nowrap; }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; align-items: center; gap: clamp(14px,3vw,32px); font-size: .9rem; font-weight: 600; color: #475569; }
-    .nav-links a { white-space: nowrap; }
-    .hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(220px, .7fr); align-items: center; gap: clamp(36px, 7vw, 100px); padding-block: clamp(72px, 11vw, 148px); }
-    .eyebrow { font-size: .77rem; text-transform: uppercase; color: var(--accent); font-weight: 750; letter-spacing: .13em; }
-    .hero h1 { font-size: clamp(2.7rem, 5.5vw, 5.15rem); line-height: 1.085; font-weight: 800; letter-spacing: -0.055em; max-width: 760px; margin: 22px 0 25px; }
-    .hero-copy { max-width: 640px; font-size: clamp(1.04rem,1.7vw,1.22rem); color: #475569; line-height: 1.75; }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 30px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 11px 21px; border-radius: 10px; font-size: .9rem; font-weight: 700; background: var(--ink); color: #fff; transition: background .2s; }
-    .button:hover { background: var(--accent); color: #fff; }
-    .text-link { color: #334155; font-size: .92rem; font-weight: 700; }
-    .hero-visual { position: relative; }
-    .portrait { width: min(100%, 306px); aspect-ratio: 1; object-fit: cover; object-position: center top; border-radius: 30px; background: #e2e8f0; box-shadow: 16px 16px 0 #e8eef7; margin-left: auto; }
-    .location-note { font-size: .8rem; color: var(--muted); text-align: right; margin-top: 30px; }
-    .section { padding-block: 55px; scroll-margin-top: 28px; }
-    .section + .section { border-top: 1px solid var(--line); }
-    .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin-bottom: 25px; }
-    .section-heading h2 { font-size: clamp(1.55rem, 2.8vw, 2.15rem); line-height: 1.25; letter-spacing: -.035em; margin: 0; }
-    .section-heading p { font-size: .9rem; color: var(--muted); margin: 0; }
-    .focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
-    .focus-card { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-    .focus-number { color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .08em; margin: 0 0 25px; }
-    .focus-card h3 { font-size: 1.08rem; letter-spacing: -.02em; margin-bottom: 8px; }
-    .focus-card p { color: var(--muted); font-size: .92rem; margin: 0; }
-    .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
-    .work-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); transition: transform .2s, box-shadow .2s; }
-    .work-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(15,23,42,.07); }
-    .work-visual { width: 100%; height: 190px; object-fit: cover; background: #e8eef7; }
-    .work-content { padding: 25px; display: flex; flex-direction: column; flex: 1; }
-    .project-kicker { color: var(--accent); text-transform: uppercase; font-weight: 800; font-size: .69rem; letter-spacing: .11em; margin-bottom: 12px; }
-    .work-content h3 { font-size: 1.25rem; line-height: 1.32; letter-spacing: -.028em; margin-bottom: 12px; }
-    .work-content p { font-size: .93rem; color: var(--muted); margin-bottom: 20px; }
-    .project-link { color: #1d4ed8; font-weight: 700; font-size: .9rem; margin-top: auto; }
-    .project-private { display: flex; align-items: flex-start; justify-content: center; background: #0f172a; color: #dbeafe; flex-direction: column; gap: 14px; padding: 28px; }
-    .project-private .symbol { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1; font-weight: 700; letter-spacing: -.07em; }
-    .project-private .sub { color: #94a3b8; font-size: .9rem; }
-    .archive { margin-top: 28px; border-top: 1px solid var(--line); }
-    .archive-title { color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding-top: 23px; }
-    .archive a { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: .95rem; font-weight: 600; }
-    .archive a span { color: var(--muted); font-size: .83rem; font-weight: 400; white-space: nowrap; }
-    .about-panel { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; border-radius: var(--radius); background: #eaf0fa; padding: clamp(24px, 5vw, 48px); }
-    .about-panel h2 { letter-spacing: -.035em; font-size: clamp(1.5rem,3vw,2.05rem); margin-bottom: 14px; }
-    .about-panel p { color: #475569; max-width: 700px; margin-bottom: 0; }
-    .site-footer { padding: 40px 0; border-top: 1px solid var(--line); margin-top: 70px; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 25px; flex-wrap: wrap; align-items: center; }
-    .footer-inner p { color: var(--muted); font-size: .86rem; margin: 0; }
-    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: .88rem; font-weight: 600; }
-    @media (max-width: 760px) {
-      .container { width: min(calc(100% - 36px), var(--content)); }
-      .navigation { min-height: 70px; gap: 16px; }
-      .nav-links { gap: 14px; font-size: .8rem; }
-      .hero { grid-template-columns: 1fr; padding-block: 60px 56px; gap: 34px; }
-      .hero h1 { margin-block: 16px 20px; }
-      .hero-visual { display: flex; align-items: center; gap: 24px; }
-      .portrait { width: min(42%, 176px); margin: 0; border-radius: 20px; box-shadow: 8px 8px 0 #e8eef7; }
-      .location-note { margin: 0; text-align: left; }
-      .focus-grid { grid-template-columns: 1fr; }
-      .focus-number { margin-bottom: 8px; }
-      .focus-card { padding: 20px; }
-      .work-grid { grid-template-columns: 1fr; }
-      .about-panel { grid-template-columns: 1fr; }
-      .section-heading { flex-direction: column; gap: 7px; }
-      .archive a { align-items: flex-start; }
-    }
-    @media (max-width: 390px) {
-      .nav-links { gap: 10px; }
-      .nav-links a { font-size: .74rem; }
-      .logo { font-size: 1.02rem; }
-      .archive a span { display: none; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .work-card, .button { transition: none; }
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Abdul Kousa Portfolio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .w3-card-4 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .w3-card-4 img {
+            flex: 1;
+            width:25%;
+            height: auto;
+            max-height: none; 
+        }
+
+        .w3-container {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .highlighted-text {
+            font-size: 17.5px; /* Adjust the font size as needed */
+            color: #0d8f38; /* Change the text color to a contrasting color */
+        }
+
+        .typing-container {
+            height: 20px; /* Set a reasonable fixed height for the container */
+        }
+
+        .header-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .profile-image {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .tagline {
+            margin-top: 20px;
+        }
+
+        .contact-links {
+            margin-top: 10px;
+        }
+
+        .contact-links a {
+            margin: 0 10px;
+            color: #f1f1f1;
+        }
+
+        .smaller-text {
+           font-size: 12px; /* Adjust the font size as needed */
+        }
+
+        /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+        @media (max-width: 768px) {
+            /* Change the flex-direction to column for smaller screens (e.g., mobile) */
+            .w3-card-4 {
+                flex-direction: column;
+            }
+
+            /* Adjust image size for mobile devices */
+            .w3-card-4 img {
+                width: 100%; /* Make the image take the full width of the card */
+                height: auto; /* Maintain aspect ratio */
+                max-width: none; /* Disable max-width on the image */
+            }
+        }
+
+    </style>
 </head>
-<body>
-  <header class="site-header">
-    <nav class="container navigation" aria-label="Main navigation">
-      <a class="logo" href="index.html" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#focus">Focus</a>
-        <a href="about_me.html">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="container hero" aria-labelledby="intro-title">
-      <div>
-        <div class="eyebrow">AI &amp; Data Consultant · Copenhagen</div>
-        <h1 id="intro-title">Building practical AI for real-world problems.</h1>
-        <p class="hero-copy">I'm Abdul Kousa. I work at the intersection of data, AI and business, with a background in data science and mathematical modelling and a focus on turning complex ideas into useful solutions.</p>
-        <div class="hero-actions">
-          <a class="button" href="#work">Explore my work &rarr;</a>
-          <a class="text-link" href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+
+<body class="w3-light-grey">
+
+   <!-- Navigation Bar -->
+   <div class="w3-top w3-bar w3-dark-grey w3-card">
+        <a class="w3-bar-item w3-button" href="index.html">
+            <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
+        </a>
+        <div class="w3-right"> <!--  w3-hide-small -->
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+            <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
         </div>
-      </div>
-      <div class="hero-visual">
-        <img class="portrait" src="images/Abdulstar_Kousa.png" alt="Portrait of Abdul Kousa" width="320" height="320" fetchpriority="high">
-        <p class="location-note">Based in Denmark<br>Working in financial services</p>
-      </div>
-    </section>
-
-    <section class="container section" id="focus" aria-labelledby="focus-title">
-      <div class="section-heading">
-        <h2 id="focus-title">What I focus on</h2>
-        <p>From an idea to something useful.</p>
-      </div>
-      <div class="focus-grid">
-        <article class="focus-card">
-          <p class="focus-number">01 / AI</p>
-          <h3>Applied AI</h3>
-          <p>Exploring how language models and intelligent workflows can solve practical problems.</p>
-        </article>
-        <article class="focus-card">
-          <p class="focus-number">02 / DATA</p>
-          <h3>Data &amp; Analytics</h3>
-          <p>Using data, statistical thinking and clear visualisation to support decisions.</p>
-        </article>
-        <article class="focus-card">
-          <p class="focus-number">03 / ENGINEERING</p>
-          <h3>AI Engineering</h3>
-          <p>Designing and building reliable data-driven systems, with a growing focus on production AI.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="container section" id="work" aria-labelledby="work-title">
-      <div class="section-heading">
-        <h2 id="work-title">Selected work</h2>
-        <p>A mix of personal and academic projects.</p>
-      </div>
-      <div class="work-grid">
-        <article class="work-card">
-          <div class="work-visual project-private" role="img" aria-label="Abstract financial analytics project illustration">
-            <span class="symbol">{ data → insight }</span>
-            <span class="sub">Personal project · In progress</span>
-          </div>
-          <div class="work-content">
-            <div class="project-kicker">Financial analytics · Personal project</div>
-            <h3>Personal Finance &amp; Investment Analytics</h3>
-            <p>Building a personal platform for monitoring investments, organising financial data and exploring AI-assisted insights. A public case study is in preparation.</p>
-            <span class="project-link">Case study coming soon</span>
-          </div>
-        </article>
-        <article class="work-card">
-          <img class="work-visual" src="images/EMFSAU.png" loading="lazy" alt="Smartphone usage forecasting project visual">
-          <div class="work-content">
-            <div class="project-kicker">Master's thesis · 2022</div>
-            <h3>Forecasting Smartphone App Usage</h3>
-            <p>Built a multivariate time-series deep learning model using behavioural data from more than 12,000 users to forecast app usage.</p>
-            <a class="project-link" href="html/project1.html">Read case study &rarr;</a>
-          </div>
-        </article>
-        <article class="work-card">
-          <img class="work-visual" src="images/IMDB.png" loading="lazy" alt="IMDb sentiment classification project visual">
-          <div class="work-content">
-            <div class="project-kicker">NLP &amp; MLOps · 2022</div>
-            <h3>IMDb Sentiment Classifier</h3>
-            <p>Used BERT and Hugging Face Transformers to classify film-review sentiment, with attention to the model development workflow.</p>
-            <a class="project-link" href="html/project3.html">Read case study &rarr;</a>
-          </div>
-        </article>
-        <article class="work-card">
-          <img class="work-visual" src="images/MBCH.png" loading="lazy" alt="Mobile app behaviour analysis project visual">
-          <div class="work-content">
-            <div class="project-kicker">Time series · 2022</div>
-            <h3>Understanding Changes in Mobile App Usage</h3>
-            <p>Analysed smartphone behaviour and compared forecasting methods to understand trends and changes in app usage.</p>
-            <a class="project-link" href="html/project2.html">Read case study &rarr;</a>
-          </div>
-        </article>
-      </div>
-      <div class="archive" aria-label="Academic project archive">
-        <p class="archive-title">From the academic archive</p>
-        <a href="html/project5.html">Deep Learning Image Colorization <span>Computer Vision · 2021 ↗</span></a>
-        <a href="html/project4.html">New York City Car Collision Prediction <span>Machine Learning · 2021 ↗</span></a>
-      </div>
-    </section>
-
-    <section class="container section" aria-labelledby="about-title">
-      <div class="about-panel">
-        <div>
-          <h2 id="about-title">A little about me</h2>
-          <p>I'm an AI &amp; Data Consultant working in financial services in Denmark. I enjoy connecting technical depth with business needs, learning how systems work end-to-end, and building things that make complex information easier to use.</p>
-        </div>
-        <a class="button" href="about_me.html">More about me &rarr;</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="contact">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
-      <div class="footer-links">
-        <a href="mailto:abdul.kousa@gmail.com">Email ↗</a>
-        <a href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/AbdulstarKousa" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-      </div>
     </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+    <!-- Header -->
+    <header id="aboutme" class="w3-container header-container w3-padding-32">
+        <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" class="profile-image">      
+        <h1><b>Abdul Kousa</b></h1>
+        <p class="tagline">Welcome to my <span class="w3-tag">data science</span> portfolio</p>
+        <div class="typing-container">
+            <p id="typing-text"></p>
+        </div>
+    </header>
+
+    <!-- Blog entries -->
+    <div id="projects">  </div>
+
+    <!-- Title for Projects -->
+    <div class="w3-container w3-center w3-padding-16">
+        <br>
+        <h2><b>Projects</b></h2>
+    </div>
+
+    <div class="w3-content" style="max-width:1400px">
+
+      <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+            <!-- Image -->
+            <img src="images\EMFSAU.png" alt="">
+            <div class="w3-container">
+                <!-- title with link -->
+                <h3><b><a href="html/project1.html">Exploring, Modeling, and Forecasting Smartphone App Usage Behavior</a></b></h3>
+                <!-- type & date -->
+                <h5>Master’s Thesis, <span class="w3-opacity">Fall 2022</span></h5>
+                <!-- description -->
+                <p>Explore, model, and predict smartphone app usage behavior in this data project. Leveraging a rich real-world dataset from 12k+ users, I developed a novel multivariate time-series deep-learning model based on Hierarchical Attention Networks (HAN) to accurately forecast users' weekly app usage. The model outperforms baseline models, including persistence and simple GRU/LSTM cells. Uncovering insights into usage patterns and the potential for identifying problematic smartphone usage.</p>
+                <div class="w3-row">
+                    <div class="w3-col m8 s12">
+                      <!-- read more -->
+                        <a href="html/project1.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <!-- Image -->
+          <img src="images\MBCH.png" alt="">
+          <div class="w3-container">
+              <!-- title with link -->
+              <h3><b><a href="html/project2.html">Measuring Behavioral Change within Mobile App Usage</a></b></h3>
+              <!-- type & date -->
+              <h5>Project, <span class="w3-opacity">Summer 2022</span></h5>
+              <!-- description -->
+              <p>Explore the world of time series analysis and its practical applications in mobile app usage behavior. Leveraging data from 10k+ smartphone users, this project unveils insights into daily screen time, check frequency, and app usage trends. Discover key findings, including the superiority of the Facebook Prophet model in forecasting daily check numbers and adapting to change points compared to seasonal ARIMA.</p>
+              <div class="w3-row">
+                  <div class="w3-col m8 s12">
+                      <!-- read more -->                    
+                      <a href="html/project2.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <!-- Image -->
+          <img src="images\IMDB.png" alt="">
+          <div class="w3-container">
+              <!-- title with link -->
+              <h3><b><a href="html/project3.html">IMDb Reviews Binary Sentiment Classifier</a></b></h3>
+              <!-- type & date -->
+              <h5>Project, <span class="w3-opacity">Jan. 2022</span></h5>
+              <!-- description -->
+              <p>Developed a state-of-the-art IMDb movie review sentiment classifier. Leveraging the power of the Hugging Face Transformer framework, this machine learning model, based on BERT, automatically categorizes reviews into positive or negative sentiments. Emphasizing MLOps practices, from data prep to deployment.</p>
+              <div class="w3-row">
+                  <div class="w3-col m8 s12">
+                      <!-- read more -->
+                    <a href="html/project3.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+            <!-- Image -->
+            <img src="images\ICDL.png" alt="">
+            <div class="w3-container">
+                <!-- title with link -->
+                <h3><b><a href="html/project5.html">Deep Learning Image Colorization</a></b></h3>
+                <!-- type & date -->
+                <h5>Project, <span class="w3-opacity">Fall 2021</span></h5>
+                <!-- description -->
+                <p>Explore the world of Deep Learning Image Colorization with this project. Using Convolutional Neural Networks (CNNs) and conditional Generator-Discriminator pipelines, including Attention U-Net and GAN architectures, we tackle the complex task of predicting color channels from grayscale inputs. Our project evaluates model performance using computer vision metrics like PSNR, SSIM, and LPIPS. Dive into the challenging realm of colorization with our exploration of L·a·b Color Space and discover the optimal model for grayscale image colorization.</p>
+                <div class="w3-row">
+                    <div class="w3-col m8 s12">
+                        <!-- read more -->
+                      <a href="html/project5.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <!-- Image -->
+          <img src="images\NYC_CC.jpg" alt="">
+          <div class="w3-container">
+              <!-- title with link -->
+              <h3><b><a href="html/project4.html">New York City Car Collision Prediction</a></b></h3>
+              <!-- type & date -->
+              <h5>Project, <span class="w3-opacity">Spring 2021</span></h5>
+              <!-- description -->
+              <p>Focusing on predicting car collisions in New York City using traditional machine learning techniques. This data-driven project investigates contributing factors to offer insights for accident prevention. Experience interactive data storytelling and visualization through thoughtfully designed dashboards.</p>
+              <div class="w3-row">
+                  <div class="w3-col m8 s12">
+                      <!-- read more -->
+                      <a href="html/project4.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <hr>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top smaller-text">
+        <!-- Contacts -->
+        <div class="contact-links">
+            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a>
+        </div>
+        <div class="contact-links">
+            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a>
+        </div>
+        <div class="contact-links">
+            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
+        </div>
+        <!-- Year -->
+        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
+    </footer>
+
+    <!-- Script for the year -->
+    <script>
+        // JavaScript code to update the year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Script for the typing -->
+    <script>
+        // Initialize typed.js
+        var options = {
+            strings: ["I'm a Data Scientist", "Passionate about data", "Analyzing trends", "Building models",""],
+            typeSpeed: 50, // typing speed in milliseconds
+            backSpeed: 25, // backspacing speed in milliseconds
+            backDelay: 1500, // delay before starting to backspace
+            showCursor: false, // show blinking cursor
+            cursorChar: "|", // cursor character
+            onComplete: function (self) {
+                // Reset the Typed instance to start again
+                self.reset();
+            },
+        };
+        var typed = new Typed("#typing-text", options);
+    </script>
+
 </body>
 </html>
