@@ -1,122 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMDb Reviews Binary Sentiment Classifier</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body, h1, h2, h3, h4, h5 {
-            font-family: "Raleway", sans-serif;
-        }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f8fafc" name="theme-color"/>
+<meta content="How an IMDb review sentiment classifier became an end-to-end MLOps team project, combining BERT-family transformers, data versioning, containers and model serving." name="description"/>
+<link href="https://www.abdulkousa.com/html/project3.html" rel="canonical"/>
+<link href="../favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="article" property="og:type"/>
+<meta content="IMDb Sentiment Classification &amp; MLOps | Abdul Kousa" property="og:title"/>
+<meta content="A machine learning team project that takes sentiment classification beyond the notebook and into a deployable model service." property="og:description"/>
+<title>IMDb Sentiment Classification &amp; MLOps | Abdul Kousa</title>
 
-        .header-with-margin {
-            margin: 40px; /* Set the margin to match the cards */
-            background-color: #f1f1f1;
-        }
-
-        .w3-card-4 {
-            display: flex;
-            flex-direction: row;
-            margin: 20px; /* Adjust margin as needed */
-            background-color: white; /* Set the background color */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            border-radius: 4px; /* Add rounded corners */
-        }
-
-        .w3-card-4 img {
-            flex: 1;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .w3-container {
-            flex: 2;
-            padding: 20px;
-            text-align: left; /* Align text to the left */
-        }
-
-        .highlighted-text {
-            font-size: 17.5px;
-            color: #0d8f38;
-        }
-
-        .contact-links {
-            margin-top: 10px;
-        }
-
-        .contact-links a {
-            margin: 0 10px;
-            color: #f1f1f1;
-        }
-
-        .smaller-text {
-           font-size: 12px; /* Adjust the font size as needed */
-        }
-
-    </style>
+<link href="../styles/site.css?v=social-icons-3" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head>
+<body>
+<header class="site-header">
+<nav aria-label="Main navigation" class="container navigation">
+<a aria-label="Abdul Kousa home" class="logo" href="../index.html">Abdul Kousa<span>.</span></a>
+<div class="nav-links">
+<a aria-current="page" href="../index.html#work">Work</a>
 
-<body class="w3-light-grey">
-    <!-- Navigation Bar -->
-    <div class="w3-top w3-bar w3-dark-grey w3-card">
-        <a class="w3-bar-item w3-button" href="../index.html">
-            <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
-        </a>
-        <div class="w3-right"> <!--w3-hide-small-->
-            <a href="../index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="../index.html#projects" class="w3-bar-item w3-button">Projects</a>
-            <a href="../about_me.html" class="w3-bar-item w3-button">About Me</a>
-        </div>
+<a href="../about_me.html">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<div aria-label="Breadcrumb" class="container breadcrumb">
+<a href="../index.html#work">Work</a><a href="../index.html#writing">Writing</a><span aria-hidden="true" class="sep">/</span>IMDb sentiment classification
     </div>
-
-    <!-- Header -->
-    <header class="w3-container w3-center w3-padding-32 header-with-margin" style="margin-top: 50px;">
-        <img src="..\images\IMDB.png" alt="" style="max-width: 150px; border-radius: 50%;">
-        <h1><b>IMDb Reviews Binary Sentiment Classifier</b></h1>
-        <p style="text-align: left;"><strong>Overview:</strong></p>
-        <p style="text-align: left;">As part of my Master's Project, I developed a cutting-edge machine learning model for the automatic classification of IMDb movie reviews into positive or negative sentiments. This project encompassed the entire machine learning project lifecycle, from data organization and preprocessing to model deployment in a production environment, emphasizing MLOps practices.</p>
-        <p style="text-align: left;"><strong>Data Sources:</strong></p>
-        <p style="text-align: left;">The project utilized a dataset available on the Hugging Face GitHub page, consisting of movie reviews with binary sentiment labels.</p>
-        <p style="text-align: left;"><strong>Tools and Technologies Used:</strong></p>
-        <p style="text-align: left;">Key tools and technologies involved in this project:</p>
-        <ul>
-            <li style="text-align: left;">MLOps tools (Git, DVC, Docker, GCP, Pytest, code organization, project documentation)</li>
-            <li style="text-align: left;">Python</li>
-        </ul>
-        <p style="text-align: left;"><strong>Key Findings:</strong></p>
-        <ul>
-            <li style="text-align: left;">Successful development of a binary sentiment classifier using the Hugging Face Transformer framework.</li>
-            <li style="text-align: left;">Leveraging a Bidirectional Encoder Representations from Transformers (BERT) model for sentiment analysis.</li>
-        </ul>
-        <p style="text-align: left;"><strong>Learn More</strong></p>
-        <p style="text-align: left;">For a comprehensive exploration of this project, including methodologies, code, please refer <a href="https://bit.ly/Abdul-IMDbReviews">here</a>.</p>
-    </header>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top smaller-text">
-        <!-- Contacts -->
-        <div class="contact-links">
-            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
-        </div>
-        <!-- Year -->
-        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
-    </footer>
-    
-    <!-- Script for the year -->
-    <script>
-        // JavaScript code to update the year
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-
+<section aria-labelledby="case-title" class="container case-hero">
+<div>
+<p class="eyebrow">Machine learning · MLOps · Team project · 2022</p>
+<h1 id="case-title">From sentiment model to deployable service.</h1>
+<p class="case-lead">Classifying IMDb movie reviews with a transformer-based model, while exploring the engineering practices needed to organise data, package models and serve predictions outside a notebook.</p>
+<div class="hero-actions">
+<a class="button" href="https://github.com/AbdulstarKousa/Project-MLOps-2022" rel="noopener noreferrer" target="_blank">Explore GitHub repository ↗</a>
+<a class="text-link" href="#approach">See the workflow ↓</a>
+</div>
+</div>
+<aside aria-label="Project at a glance" class="case-meta">
+<div class="meta-row"><p class="meta-label">Dataset</p><p class="meta-value">50,000 labelled reviews</p></div>
+<div class="meta-row"><p class="meta-label">Task</p><p class="meta-value">Positive / negative sentiment</p></div>
+<div class="meta-row"><p class="meta-label">Toolkit</p><p class="meta-value">Transformers · DVC · Docker · GCP</p></div>
+</aside>
+</section>
+<section aria-label="High-level machine learning workflow" class="container">
+<div class="case-visual">
+<div class="visual-top">
+<p>Machine learning lifecycle</p><span>Conceptual overview · simplified for presentation</span>
+</div>
+<div class="pipeline">
+<div class="pipe"><i>01 / DATA</i><strong>Labelled IMDb reviews</strong></div>
+<div class="pipe"><i>02 / TRAIN</i><strong>Transformer fine-tuning</strong></div>
+<div class="pipe"><i>03 / PACKAGE</i><strong>Versioning &amp; Docker</strong></div>
+<div class="pipe"><i>04 / SERVE</i><strong>Sentiment prediction API</strong></div>
+</div>
+<p class="visual-caption">The project repository documents data versioning, container images and a local prediction endpoint. This diagram is not a claim about a currently running public service.</p>
+</div>
+</section>
+<section aria-labelledby="challenge-title" class="container case-section content-grid">
+<div>
+<p class="section-label">01 / The challenge</p>
+<h2 id="challenge-title">A model is only part of the product.</h2>
+</div>
+<div class="body-copy">
+<p>Recognising whether a written review expresses positive or negative sentiment is a familiar natural language processing task. The more interesting challenge here was taking it through a structured machine learning lifecycle.</p>
+<p>As part of a team project for DTU's Machine Learning Operations course, we explored how to organise training data, work with a pretrained transformer model, and make the result available through a repeatable, containerised workflow.</p>
+</div>
+</section>
+<section aria-labelledby="approach-title" class="container case-section" id="approach">
+<p class="section-label">02 / The approach</p>
+<h2 id="approach-title">From reviews to reproducible inference.</h2>
+<p>The original repository documents a workflow spanning model training and operational tooling, not just a classification notebook.</p>
+<div class="method-grid">
+<article class="method-card">
+<p class="num">01 / DATA</p>
+<h3>Prepare labelled reviews</h3>
+<p>Use IMDb sentiment data described in the repository as 25,000 training reviews and 25,000 evaluation reviews.</p>
+</article>
+<article class="method-card">
+<p class="num">02 / MODEL</p>
+<h3>Adapt a pretrained transformer</h3>
+<p>Apply transfer learning with Hugging Face Transformers and BERT-family architectures for binary classification.</p>
+</article>
+<article class="method-card">
+<p class="num">03 / OPERATE</p>
+<h3>Package and serve predictions</h3>
+<p>Explore DVC for dataset management, Python tests, Docker packaging and Google Cloud-based container images.</p>
+</article>
+</div>
+<div aria-label="Documented local inference example" class="code-strip">
+<p>Example from the project README · local inference</p>
+<code>curl localhost:8080/predictions/distilbert -T review.txt</code>
+</div>
+<p style="font-size:.82rem; color:var(--muted); margin-top:12px;">This historical command illustrates the documented serving interface; it requires the original service and image to be running locally.</p>
+</section>
+<section aria-labelledby="outcomes-title" class="container case-section content-grid">
+<div>
+<p class="section-label">03 / What came out of it</p>
+<h2 id="outcomes-title">An end-to-end learning experience.</h2>
+</div>
+<div>
+<div class="finding">
+<span aria-hidden="true" class="finding-mark">✓</span>
+<div><h3>Transformer-based sentiment classification</h3><p>The project used the Hugging Face framework for positive-versus-negative review classification with BERT-family models.</p></div>
+</div>
+<div class="finding">
+<span aria-hidden="true" class="finding-mark">↗</span>
+<div><h3>Packaging beyond a notebook</h3><p>The repository documents Docker-based training and deployment images, including a local HTTP interface for text inference.</p></div>
+</div>
+<div class="finding">
+<span aria-hidden="true" class="finding-mark">◇</span>
+<div><h3>Reproducibility as a design concern</h3><p>The project structure uses versioned data tooling, a defined Python package layout and tests to make experimentation more systematic.</p></div>
+</div>
+<div class="callout"><strong>Evidence boundary:</strong> The available project documentation does not establish a verified benchmark score or that a public deployment is still live. Neither is claimed here.</div>
+</div>
+</section>
+<section aria-labelledby="takeaway-title" class="container case-section content-grid">
+<div>
+<p class="section-label">04 / The takeaway</p>
+<h2 id="takeaway-title">Engineering matters after training.</h2>
+</div>
+<div class="body-copy">
+<p>This was an early, collaborative look at the gap between an ML experiment and software someone else can run. Data lineage, repeatable environments, testing and serving are as important to discuss as a model architecture.</p>
+<p>That perspective still informs how I approach practical AI systems today: focus on what must work reliably around the model, not only on the model itself.</p>
+</div>
+</section>
+<section aria-labelledby="resources-title" class="container">
+<div class="resource-panel">
+<div>
+<h2 id="resources-title">Explore the actual project.</h2>
+<p>The original team repository contains implementation details, setup instructions and deployment examples. The previous project write-up is also available below.</p>
+</div>
+<div style="display:flex; gap:15px; flex-wrap:wrap; align-items:center;">
+<a class="button" href="https://github.com/AbdulstarKousa/Project-MLOps-2022" rel="noopener noreferrer" target="_blank">View source code ↗</a>
+<a class="text-link" href="https://bit.ly/Abdul-IMDbReviews" rel="noopener noreferrer" target="_blank">Original write-up ↗</a>
+</div>
+</div>
+<div class="case-next">
+<a href="../index.html#work">← Back to selected work</a>
+<a href="project1.html">Previous: Smartphone usage forecasting →</a>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+<div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links">
+<a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" rel="noopener noreferrer" target="_blank"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" rel="noopener noreferrer" target="_blank"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a>
+</div>
+</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
