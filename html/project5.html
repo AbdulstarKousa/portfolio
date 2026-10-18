@@ -8,51 +8,43 @@
 <meta property="og:description" content="Comparing convolutional and adversarial deep learning methods for image colorization and evaluating outcomes with visual quality metrics.">
 <link rel="canonical" href="https://www.abdulkousa.com/html/project5.html">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="../styles/site.css?v=social-icons-3">
+<link rel="stylesheet" href="../styles/site.css?v=neutral-links-1">
 <title>Teaching neural networks to colour grayscale images. | Abdul Kousa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
   <a href="../index.html" class="logo" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
-  <div class="nav-links"><a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
+  <div class="nav-links"><a href="../index.html#work" aria-current="page">Projects</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
 </nav></header>
-<main>
-<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep" aria-hidden="true">/</span>Teaching neural networks to colour grayscale images.</div>
+<main class="project-reading">
+<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Projects</a><span class="sep" aria-hidden="true">/</span>Teaching neural networks to colour grayscale images.</div>
 <section class="container case-hero" aria-labelledby="case-title"><div>
-<p class="eyebrow">Computer vision · Deep learning · Team project · 2021</p>
+<p class="eyebrow">Computer vision · 2021</p>
 <h1 id="case-title">Teaching neural networks to colour grayscale images.</h1>
 <p class="case-lead">Exploring how convolutional networks and conditional generative models can infer plausible colours from black-and-white photographs.</p>
-<div class="hero-actions"><a class="button" href="https://github.com/AbdulstarKousa/DeepLearners2021/blob/main/Report.pdf" target="_blank" rel="noopener noreferrer">Read the research report ↗</a><a class="text-link" href="#approach">Explore the approach ↓</a></div>
+
 </div><aside class="case-meta" aria-label="Project at a glance">
 <div class="meta-row"><p class="meta-label">Input</p><p class="meta-value">Grayscale images</p></div>
 <div class="meta-row"><p class="meta-label">Architectures</p><p class="meta-value">CNN · Attention U-Net · GAN</p></div>
 <div class="meta-row"><p class="meta-label">Evaluation</p><p class="meta-value">PSNR · SSIM · LPIPS</p></div>
 </aside></section>
-<section class="container" aria-label="High-level project workflow"><div class="case-visual">
-<div class="visual-top"><p>Image colourization workflow</p><span>Conceptual overview · simplified for presentation</span></div>
-<div class="pipeline">
-<div class="pipe"><i>01 / INPUT</i><strong>Grayscale image</strong></div>
-<div class="pipe"><i>02 / REPRESENT</i><strong>L*a*b* colour space</strong></div>
-<div class="pipe"><i>03 / GENERATE</i><strong>Model colour channels</strong></div>
-<div class="pipe"><i>04 / ASSESS</i><strong>Perceptual &amp; pixel metrics</strong></div>
-</div><p class="visual-caption">Conceptual flow of the modelling task. Multiple plausible colour outputs can exist for the same grayscale input.</p></div></section>
-<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><p class="section-label">01 / The challenge</p><h2 id="challenge-title">A grayscale image has no single correct colour.</h2></div><div class="body-copy"><p>Turning black-and-white pictures into plausible colour images is an underdetermined task: a single grayscale value may correspond to different real-world colours.</p><p>That makes architecture selection and evaluation interesting. Visual plausibility is not always captured by a single numerical metric.</p></div></section>
-<section class="container case-section" id="approach" aria-labelledby="approach-title"><p class="section-label">02 / The approach</p><h2 id="approach-title">Compare different ways to predict colour.</h2><p>The study explored image-to-image modelling using convolutional architectures, attention-based U-Net components and adversarial training.</p><div class="method-grid">
-<article class="method-card"><p class="num">01 / REPRESENT</p><h3>Work in a perceptual colour space</h3><p>Explore L*a*b* colour space and predict colour information from the luminance channel.</p></article>
-<article class="method-card"><p class="num">02 / GENERATE</p><h3>Experiment with model families</h3><p>Compare CNN-based and conditional generator–discriminator approaches, including attention U-Net and GAN variants.</p></article>
-<article class="method-card"><p class="num">03 / EVALUATE</p><h3>Use complementary metrics</h3><p>Examine PSNR, SSIM and LPIPS to compare reconstruction quality and perceptual similarity.</p></article>
+<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><h2 id="challenge-title">A grayscale image has no single correct colour.</h2></div><div class="body-copy"><p>Turning black-and-white pictures into plausible colour images is an underdetermined task: a single grayscale value may correspond to different real-world colours.</p><p>That makes architecture selection and evaluation interesting. Visual plausibility is not always captured by a single numerical metric.</p></div></section>
+<section class="container case-section" id="approach" aria-labelledby="approach-title"><h2 id="approach-title">Compare different ways to predict colour.</h2><p>The study explored image-to-image modelling using convolutional architectures, attention-based U-Net components and adversarial training.</p><div class="method-grid">
+<article class="method-card"><h3>Work in a perceptual colour space</h3><p>Explore L*a*b* colour space and predict colour information from the luminance channel.</p></article>
+<article class="method-card"><h3>Experiment with model families</h3><p>Compare CNN-based and conditional generator–discriminator approaches, including attention U-Net and GAN variants.</p></article>
+<article class="method-card"><h3>Use complementary metrics</h3><p>Examine PSNR, SSIM and LPIPS to compare reconstruction quality and perceptual similarity.</p></article>
 </div></section>
-<section class="container case-section content-grid" aria-labelledby="findings-title"><div><p class="section-label">03 / The findings</p><h2 id="findings-title">Lessons from image generation.</h2></div><div>
-<div class="finding"><span class="finding-mark" aria-hidden="true">◎</span><div><h3>Colourization is inherently ambiguous</h3><p>A predicted colour image may look plausible even when it differs from the ground-truth image.</p></div></div>
-<div class="finding"><span class="finding-mark" aria-hidden="true">◇</span><div><h3>Architecture choices involve trade-offs</h3><p>Convolutional, attention-based and adversarial approaches have different strengths and training considerations.</p></div></div>
-<div class="finding"><span class="finding-mark" aria-hidden="true">↗</span><div><h3>Metric choice changes the story</h3><p>PSNR, SSIM and LPIPS provide distinct perspectives rather than a universally sufficient quality measure.</p></div></div>
+<section class="container case-section content-grid" aria-labelledby="findings-title"><div><h2 id="findings-title">Lessons from image generation.</h2></div><div>
+<div class="finding"><div><h3>Colourization is inherently ambiguous</h3><p>A predicted colour image may look plausible even when it differs from the ground-truth image.</p></div></div>
+<div class="finding"><div><h3>Architecture choices involve trade-offs</h3><p>Convolutional, attention-based and adversarial approaches have different strengths and training considerations.</p></div></div>
+<div class="finding"><div><h3>Metric choice changes the story</h3><p>PSNR, SSIM and LPIPS provide distinct perspectives rather than a universally sufficient quality measure.</p></div></div>
 <div class="callout"><strong>Evidence note:</strong> The available portfolio summary does not provide a reproducible final ranking or benchmark table, so no winning architecture or score is claimed on this page.</div>
 </div></section>
-<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><p class="section-label">04 / The takeaway</p><h2 id="takeaway-title">Evaluation should match the real task.</h2></div><div class="body-copy"><p>Not every machine learning problem has a single objectively correct prediction. Colourization is a useful example of why evaluation needs both technical measures and thoughtful interpretation.</p><p>The project developed experience working with generative models and comparing their outputs systematically.</p></div></section>
+<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><h2 id="takeaway-title">Evaluation should match the real task.</h2></div><div class="body-copy"><p>Not every machine learning problem has a single objectively correct prediction. Colourization is a useful example of why evaluation needs both technical measures and thoughtful interpretation.</p><p>The project developed experience working with generative models and comparing their outputs systematically.</p></div></section>
 <section class="container" aria-labelledby="resources-title"><div class="resource-panel"><div><h2 id="resources-title">Read the full report.</h2><p>The team report documents the architectures, experiments, qualitative examples and evaluation criteria.</p></div>
-<a class="button" href="https://github.com/AbdulstarKousa/DeepLearners2021/blob/main/Report.pdf" target="_blank" rel="noopener noreferrer">Read the research report ↗</a></div>
-<div class="case-next"><a href="../index.html#work">← Back to all work</a><a href="project1.html">Next: Smartphone forecasting →</a></div>
+<a class="button resource-button" href="https://github.com/AbdulstarKousa/DeepLearners2021/blob/main/Report.pdf" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H5v18h14V8l-5-5Z"/><path d="M14 3v5h5M8 12h8M8 16h8"/></svg><span>Read the research report &#8599;</span></a></div>
+<div class="case-next"><a href="../index.html#work">← Back to all projects</a><a href="project1.html">Next: Smartphone forecasting →</a></div>
 </section></main><footer class="site-footer" id="contact"><div class="container footer-inner">
 <p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
 <div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>

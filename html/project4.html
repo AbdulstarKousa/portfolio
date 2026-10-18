@@ -8,51 +8,43 @@
 <meta property="og:description" content="Exploring New York City motor vehicle collisions with multi-source data, mapping, interactive visualisations and machine learning.">
 <link rel="canonical" href="https://www.abdulkousa.com/html/project4.html">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="../styles/site.css?v=social-icons-3">
+<link rel="stylesheet" href="../styles/site.css?v=neutral-links-1">
 <title>Understanding serious collisions in New York City. | Abdul Kousa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
   <a href="../index.html" class="logo" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
-  <div class="nav-links"><a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
+  <div class="nav-links"><a href="../index.html#work" aria-current="page">Projects</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
 </nav></header>
-<main>
-<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep" aria-hidden="true">/</span>Understanding serious collisions in New York City.</div>
+<main class="project-reading">
+<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Projects</a><span class="sep" aria-hidden="true">/</span>Understanding serious collisions in New York City.</div>
 <section class="container case-hero" aria-labelledby="case-title"><div>
-<p class="eyebrow">Data science · Predictive modelling · 2021</p>
+<p class="eyebrow">Predictive modelling · 2021</p>
 <h1 id="case-title">Understanding serious collisions in New York City.</h1>
 <p class="case-lead">Combining collision records, weather and speed-limit data to examine road safety patterns and experiment with models of accident severity.</p>
-<div class="hero-actions"><a class="button" href="https://bit.ly/Abdul-NYCCarCollisions" target="_blank" rel="noopener noreferrer">Open original project ↗</a><a class="text-link" href="#approach">Explore the approach ↓</a></div>
+
 </div><aside class="case-meta" aria-label="Project at a glance">
 <div class="meta-row"><p class="meta-label">Data</p><p class="meta-value">NYC collisions · Weather · Speed limits</p></div>
 <div class="meta-row"><p class="meta-label">Analysis</p><p class="meta-value">Patterns and geographic hotspots</p></div>
 <div class="meta-row"><p class="meta-label">Methods</p><p class="meta-value">Logistic regression · Trees · Random forest</p></div>
 </aside></section>
-<section class="container" aria-label="High-level project workflow"><div class="case-visual">
-<div class="visual-top"><p>Exploration and modelling workflow</p><span>Conceptual overview · simplified for presentation</span></div>
-<div class="pipeline">
-<div class="pipe"><i>01 / COLLECT</i><strong>Multiple NYC datasets</strong></div>
-<div class="pipe"><i>02 / PREPARE</i><strong>Clean &amp; join features</strong></div>
-<div class="pipe"><i>03 / EXPLORE</i><strong>Maps &amp; dashboards</strong></div>
-<div class="pipe"><i>04 / MODEL</i><strong>Severity classification</strong></div>
-</div><p class="visual-caption">Conceptual summary of the documented project, rather than a live operational risk-scoring system.</p></div></section>
-<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><p class="section-label">01 / The challenge</p><h2 id="challenge-title">Public datasets seldom fit neatly together.</h2></div><div class="body-copy"><p>Road accidents happen in a wider context. Location, timing, traffic conditions and weather may all matter, but the relevant information is spread across multiple sources.</p><p>The project combined descriptive analysis with predictive modelling, seeking to understand accident-severity patterns and present the findings in a format people could explore.</p></div></section>
-<section class="container case-section" id="approach" aria-labelledby="approach-title"><p class="section-label">02 / The approach</p><h2 id="approach-title">Integrate data. Map patterns. Test models.</h2><p>The work linked exploratory analysis with interactive data storytelling and traditional supervised machine learning.</p><div class="method-grid">
-<article class="method-card"><p class="num">01 / INTEGRATE</p><h3>Build a usable dataset</h3><p>Combine NYC collision records with weather and speed-limit data, then prepare the features and address missing values.</p></article>
-<article class="method-card"><p class="num">02 / EXPLORE</p><h3>Make patterns visible</h3><p>Investigate temporal trends, geographic hotspots and contributing factors using plotting, Folium maps and Bokeh dashboards.</p></article>
-<article class="method-card"><p class="num">03 / MODEL</p><h3>Compare classical classifiers</h3><p>Experiment with logistic regression, decision trees and random forests while considering class balance and feature importance.</p></article>
+<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><h2 id="challenge-title">Public datasets seldom fit neatly together.</h2></div><div class="body-copy"><p>Road accidents happen in a wider context. Location, timing, traffic conditions and weather may all matter, but the relevant information is spread across multiple sources.</p><p>The project combined descriptive analysis with predictive modelling, seeking to understand accident-severity patterns and present the findings in a format people could explore.</p></div></section>
+<section class="container case-section" id="approach" aria-labelledby="approach-title"><h2 id="approach-title">Integrate data. Map patterns. Test models.</h2><p>The work linked exploratory analysis with interactive data storytelling and traditional supervised machine learning.</p><div class="method-grid">
+<article class="method-card"><h3>Build a usable dataset</h3><p>Combine NYC collision records with weather and speed-limit data, then prepare the features and address missing values.</p></article>
+<article class="method-card"><h3>Make patterns visible</h3><p>Investigate temporal trends, geographic hotspots and contributing factors using plotting, Folium maps and Bokeh dashboards.</p></article>
+<article class="method-card"><h3>Compare classical classifiers</h3><p>Experiment with logistic regression, decision trees and random forests while considering class balance and feature importance.</p></article>
 </div></section>
-<section class="container case-section content-grid" aria-labelledby="findings-title"><div><p class="section-label">03 / The findings</p><h2 id="findings-title">What the project delivered.</h2></div><div>
-<div class="finding"><span class="finding-mark" aria-hidden="true">▦</span><div><h3>Explorable patterns</h3><p>The project produced visual analyses and interactive dashboards around collision patterns and accident severity.</p></div></div>
-<div class="finding"><span class="finding-mark" aria-hidden="true">◇</span><div><h3>A supervised modelling approach</h3><p>It experimented with classification methods to assess accident severity using features from multiple data sources.</p></div></div>
-<div class="finding"><span class="finding-mark" aria-hidden="true">◎</span><div><h3>Features worth investigating</h3><p>The original write-up discusses contextual variables such as location, vehicle type and weather as potentially relevant signals.</p></div></div>
+<section class="container case-section content-grid" aria-labelledby="findings-title"><div><h2 id="findings-title">What the project delivered.</h2></div><div>
+<div class="finding"><div><h3>Explorable patterns</h3><p>The project produced visual analyses and interactive dashboards around collision patterns and accident severity.</p></div></div>
+<div class="finding"><div><h3>A supervised modelling approach</h3><p>It experimented with classification methods to assess accident severity using features from multiple data sources.</p></div></div>
+<div class="finding"><div><h3>Features worth investigating</h3><p>The original write-up discusses contextual variables such as location, vehicle type and weather as potentially relevant signals.</p></div></div>
 <div class="callout"><strong>Evidence note:</strong> The old project page reports accuracy above 60%, but without the associated class balance and evaluation definition here, that percentage is not presented as an overall quality claim. Observed associations are not proof of causation.</div>
 </div></section>
-<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><p class="section-label">04 / The takeaway</p><h2 id="takeaway-title">Good analysis is more than a prediction.</h2></div><div class="body-copy"><p>The project demonstrates the value of combining data engineering, modelling and visual storytelling. A model score is only one part of making a dataset useful.</p><p>Presenting limitations and helping readers explore the underlying patterns can be just as important as selecting a particular algorithm.</p></div></section>
+<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><h2 id="takeaway-title">Good analysis is more than a prediction.</h2></div><div class="body-copy"><p>The project demonstrates the value of combining data engineering, modelling and visual storytelling. A model score is only one part of making a dataset useful.</p><p>Presenting limitations and helping readers explore the underlying patterns can be just as important as selecting a particular algorithm.</p></div></section>
 <section class="container" aria-labelledby="resources-title"><div class="resource-panel"><div><h2 id="resources-title">See the original visual story.</h2><p>The original project link contains the deeper interactive exploration, technical details and supporting analysis.</p></div>
-<a class="button" href="https://bit.ly/Abdul-NYCCarCollisions" target="_blank" rel="noopener noreferrer">Open original project ↗</a></div>
-<div class="case-next"><a href="../index.html#work">← Back to all work</a><a href="project5.html">Next: Image colorization →</a></div>
+<a class="button resource-button" href="https://s9ta2l.github.io/social_data_nyc_collisions" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>Open original project &#8599;</span></a></div>
+<div class="case-next"><a href="../index.html#work">← Back to all projects</a><a href="project5.html">Next: Image colorization →</a></div>
 </section></main><footer class="site-footer" id="contact"><div class="container footer-inner">
 <p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
 <div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
