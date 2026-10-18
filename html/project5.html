@@ -1,120 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Learning Image Colorization</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body, h1, h2, h3, h4, h5 {
-            font-family: "Raleway", sans-serif;
-        }
-
-        .header-with-margin {
-            margin: 40px; /* Set the margin to match the cards */
-            background-color: #f1f1f1;
-        }
-
-        .w3-card-4 {
-            display: flex;
-            flex-direction: row;
-            margin: 20px; /* Adjust margin as needed */
-            background-color: white; /* Set the background color */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            border-radius: 4px; /* Add rounded corners */
-        }
-
-        .w3-card-4 img {
-            flex: 1;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .w3-container {
-            flex: 2;
-            padding: 20px;
-            text-align: left; /* Align text to the left */
-        }
-
-        .highlighted-text {
-            font-size: 17.5px;
-            color: #0d8f38;
-        }
-
-        .contact-links {
-            margin-top: 10px;
-        }
-
-        .contact-links a {
-            margin: 0 10px;
-            color: #f1f1f1;
-        }
-
-        .smaller-text {
-           font-size: 12px; /* Adjust the font size as needed */
-        }
-
-
-    </style>
-</head>
-
-<body class="w3-light-grey">
-    <!-- Navigation Bar -->
-    <div class="w3-top w3-bar w3-dark-grey w3-card">
-        <a class="w3-bar-item w3-button" href="../index.html">
-            <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
-        </a>
-        <div class="w3-right"> <!--w3-hide-small-->
-            <a href="../index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="../index.html#projects" class="w3-bar-item w3-button">Projects</a>
-            <a href="../about_me.html" class="w3-bar-item w3-button">About Me</a>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="w3-container w3-center w3-padding-32 header-with-margin" style="margin-top: 50px;">
-        <img src="..\images\ICDL.png" alt="" style="max-width: 150px; border-radius: 50%;">
-        <h1><b>Deep Learning Image Colorization</b></h1>
-        <p style="text-align: left;"><strong>Overview:</strong></p>
-        <p style="text-align: left;">Colorizing black and white images is a complex task, as it involves predicting multiple color channels from a single grayscale input. This project delves into various deep learning architectures, including Convolutional Neural Networks (CNNs) and conditional Generator-Discriminator pipelines. We compare these models, assessing their performance based on well-established computer vision metrics.</p>
-        <p style="text-align: left;"><strong>Data Sources:</strong></p>
-        <p style="text-align: left;">The project relies on grayscale images as input data, allowing us to explore the challenging world of colorization.</p>
-        <p style="text-align: left;"><strong>Tools and Technologies Used:</strong></p>
-        <ul>
-            <li style="text-align: left;">Deep Learning: Utilizing CNNs and GANs to generate colorized images.</li>
-            <li style="text-align: left;">L·a·b Color Space: A more effective alternative to RGB for colorization tasks.</li>
-            <li style="text-align: left;">Image Metrics: Evaluation using PSNR, SSIM, and LPIPS to gauge colorization quality.</li>
-        </ul>
-        <p style="text-align: left;"><strong>Key Findings:</strong></p>
-        <p style="text-align: left;">Through extensive experimentation, we identify the optimal model for grayscale image colorization. We address the multi-modal and undetermined nature of this problem and discuss the intricacies of evaluating colorization results.</p>
-        <p style="text-align: left;"><strong>Learn More:</strong></p>
-        <p style="text-align: left;">For a comprehensive exploration of this project, including methodologies, code, and more, please refer <a href="https://github.com/AbdulstarKousa/DeepLearners2021/blob/main/Report.pdf">here</a>.</p>
-    </header>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top smaller-text">
-        <!-- Contacts -->
-        <div class="contact-links">
-            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
-        </div>
-        <!-- Year -->
-        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
-    </footer>
-    
-    <!-- Script for the year -->
-    <script>
-        // JavaScript code to update the year
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
+<meta name="description" content="Comparing convolutional and adversarial deep learning methods for image colorization and evaluating outcomes with visual quality metrics.">
+<meta property="og:type" content="article"><meta property="og:title" content="Teaching neural networks to colour grayscale images. | Abdul Kousa">
+<meta property="og:description" content="Comparing convolutional and adversarial deep learning methods for image colorization and evaluating outcomes with visual quality metrics.">
+<link rel="canonical" href="https://www.abdulkousa.com/html/project5.html">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../styles/site.css?v=social-icons-3">
+<title>Teaching neural networks to colour grayscale images. | Abdul Kousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
+  <a href="../index.html" class="logo" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
+  <div class="nav-links"><a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><a href="../index.html#writing">Writing</a><span class="sep" aria-hidden="true">/</span>Teaching neural networks to colour grayscale images.</div>
+<section class="container case-hero" aria-labelledby="case-title"><div>
+<p class="eyebrow">Computer vision · Deep learning · Team project · 2021</p>
+<h1 id="case-title">Teaching neural networks to colour grayscale images.</h1>
+<p class="case-lead">Exploring how convolutional networks and conditional generative models can infer plausible colours from black-and-white photographs.</p>
+<div class="hero-actions"><a class="button" href="https://github.com/AbdulstarKousa/DeepLearners2021/blob/main/Report.pdf" target="_blank" rel="noopener noreferrer">Read the research report ↗</a><a class="text-link" href="#approach">Explore the approach ↓</a></div>
+</div><aside class="case-meta" aria-label="Project at a glance">
+<div class="meta-row"><p class="meta-label">Input</p><p class="meta-value">Grayscale images</p></div>
+<div class="meta-row"><p class="meta-label">Architectures</p><p class="meta-value">CNN · Attention U-Net · GAN</p></div>
+<div class="meta-row"><p class="meta-label">Evaluation</p><p class="meta-value">PSNR · SSIM · LPIPS</p></div>
+</aside></section>
+<section class="container" aria-label="High-level project workflow"><div class="case-visual">
+<div class="visual-top"><p>Image colourization workflow</p><span>Conceptual overview · simplified for presentation</span></div>
+<div class="pipeline">
+<div class="pipe"><i>01 / INPUT</i><strong>Grayscale image</strong></div>
+<div class="pipe"><i>02 / REPRESENT</i><strong>L*a*b* colour space</strong></div>
+<div class="pipe"><i>03 / GENERATE</i><strong>Model colour channels</strong></div>
+<div class="pipe"><i>04 / ASSESS</i><strong>Perceptual &amp; pixel metrics</strong></div>
+</div><p class="visual-caption">Conceptual flow of the modelling task. Multiple plausible colour outputs can exist for the same grayscale input.</p></div></section>
+<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><p class="section-label">01 / The challenge</p><h2 id="challenge-title">A grayscale image has no single correct colour.</h2></div><div class="body-copy"><p>Turning black-and-white pictures into plausible colour images is an underdetermined task: a single grayscale value may correspond to different real-world colours.</p><p>That makes architecture selection and evaluation interesting. Visual plausibility is not always captured by a single numerical metric.</p></div></section>
+<section class="container case-section" id="approach" aria-labelledby="approach-title"><p class="section-label">02 / The approach</p><h2 id="approach-title">Compare different ways to predict colour.</h2><p>The study explored image-to-image modelling using convolutional architectures, attention-based U-Net components and adversarial training.</p><div class="method-grid">
+<article class="method-card"><p class="num">01 / REPRESENT</p><h3>Work in a perceptual colour space</h3><p>Explore L*a*b* colour space and predict colour information from the luminance channel.</p></article>
+<article class="method-card"><p class="num">02 / GENERATE</p><h3>Experiment with model families</h3><p>Compare CNN-based and conditional generator–discriminator approaches, including attention U-Net and GAN variants.</p></article>
+<article class="method-card"><p class="num">03 / EVALUATE</p><h3>Use complementary metrics</h3><p>Examine PSNR, SSIM and LPIPS to compare reconstruction quality and perceptual similarity.</p></article>
+</div></section>
+<section class="container case-section content-grid" aria-labelledby="findings-title"><div><p class="section-label">03 / The findings</p><h2 id="findings-title">Lessons from image generation.</h2></div><div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">◎</span><div><h3>Colourization is inherently ambiguous</h3><p>A predicted colour image may look plausible even when it differs from the ground-truth image.</p></div></div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">◇</span><div><h3>Architecture choices involve trade-offs</h3><p>Convolutional, attention-based and adversarial approaches have different strengths and training considerations.</p></div></div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">↗</span><div><h3>Metric choice changes the story</h3><p>PSNR, SSIM and LPIPS provide distinct perspectives rather than a universally sufficient quality measure.</p></div></div>
+<div class="callout"><strong>Evidence note:</strong> The available portfolio summary does not provide a reproducible final ranking or benchmark table, so no winning architecture or score is claimed on this page.</div>
+</div></section>
+<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><p class="section-label">04 / The takeaway</p><h2 id="takeaway-title">Evaluation should match the real task.</h2></div><div class="body-copy"><p>Not every machine learning problem has a single objectively correct prediction. Colourization is a useful example of why evaluation needs both technical measures and thoughtful interpretation.</p><p>The project developed experience working with generative models and comparing their outputs systematically.</p></div></section>
+<section class="container" aria-labelledby="resources-title"><div class="resource-panel"><div><h2 id="resources-title">Read the full report.</h2><p>The team report documents the architectures, experiments, qualitative examples and evaluation criteria.</p></div>
+<a class="button" href="https://github.com/AbdulstarKousa/DeepLearners2021/blob/main/Report.pdf" target="_blank" rel="noopener noreferrer">Read the research report ↗</a></div>
+<div class="case-next"><a href="../index.html#work">← Back to all work</a><a href="project1.html">Next: Smartphone forecasting →</a></div>
+</section></main><footer class="site-footer" id="contact"><div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a></div>
+</div></footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>

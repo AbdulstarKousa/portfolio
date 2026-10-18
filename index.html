@@ -1,278 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <title>Abdul Kousa Portfolio</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        body, h1, h2, h3, h4, h5 {
-            font-family: "Raleway", sans-serif;
-        }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f8fafc" name="theme-color"/>
+<meta content="Abdul Kousa is an AI &amp; Data Consultant based in Copenhagen, working across data science, applied AI and real-world business problems." name="description"/>
+<link href="https://www.abdulkousa.com/" rel="canonical"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<title>Abdul Kousa | AI &amp; Data Consultant</title>
+<meta content="website" property="og:type"/>
+<meta content="Abdul Kousa | AI &amp; Data Consultant" property="og:title"/>
+<meta content="Connecting data, applied AI, and real-world business problems." property="og:description"/>
+<meta content="https://www.abdulkousa.com/" property="og:url"/>
 
-        body {
-            background-color: #f1f1f1;
-        }
-
-        .w3-card-4 {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .w3-card-4 img {
-            flex: 1;
-            width:25%;
-            height: auto;
-            max-height: none; 
-        }
-
-        .w3-container {
-            flex: 2;
-            padding: 20px;
-        }
-
-        .highlighted-text {
-            font-size: 17.5px; /* Adjust the font size as needed */
-            color: #0d8f38; /* Change the text color to a contrasting color */
-        }
-
-        .typing-container {
-            height: 20px; /* Set a reasonable fixed height for the container */
-        }
-
-        .header-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .profile-image {
-            max-width: 150px;
-            border-radius: 50%;
-        }
-
-        .tagline {
-            margin-top: 20px;
-        }
-
-        .contact-links {
-            margin-top: 10px;
-        }
-
-        .contact-links a {
-            margin: 0 10px;
-            color: #f1f1f1;
-        }
-
-        .smaller-text {
-           font-size: 12px; /* Adjust the font size as needed */
-        }
-
-        /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
-        @media (max-width: 768px) {
-            /* Change the flex-direction to column for smaller screens (e.g., mobile) */
-            .w3-card-4 {
-                flex-direction: column;
-            }
-
-            /* Adjust image size for mobile devices */
-            .w3-card-4 img {
-                width: 100%; /* Make the image take the full width of the card */
-                height: auto; /* Maintain aspect ratio */
-                max-width: none; /* Disable max-width on the image */
-            }
-        }
-
-    </style>
+<link href="styles/site.css?v=social-icons-3" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head>
-
-
-<body class="w3-light-grey">
-
-   <!-- Navigation Bar -->
-   <div class="w3-top w3-bar w3-dark-grey w3-card">
-        <a class="w3-bar-item w3-button" href="index.html">
-            <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
-        </a>
-        <div class="w3-right"> <!--  w3-hide-small -->
-            <a href="index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-            <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header id="aboutme" class="w3-container header-container w3-padding-32">
-        <img src="images/Abdulstar_Kousa.png" alt="Abdul Kousa" class="profile-image">      
-        <h1><b>Abdul Kousa</b></h1>
-        <p class="tagline">Welcome to my <span class="w3-tag">data science</span> portfolio</p>
-        <div class="typing-container">
-            <p id="typing-text"></p>
-        </div>
-    </header>
-
-    <!-- Blog entries -->
-    <div id="projects">  </div>
-
-    <!-- Title for Projects -->
-    <div class="w3-container w3-center w3-padding-16">
-        <br>
-        <h2><b>Projects</b></h2>
-    </div>
-
-    <div class="w3-content" style="max-width:1400px">
-
-      <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin w3-white">
-            <!-- Image -->
-            <img src="images\EMFSAU.png" alt="">
-            <div class="w3-container">
-                <!-- title with link -->
-                <h3><b><a href="html/project1.html">Exploring, Modeling, and Forecasting Smartphone App Usage Behavior</a></b></h3>
-                <!-- type & date -->
-                <h5>Master’s Thesis, <span class="w3-opacity">Fall 2022</span></h5>
-                <!-- description -->
-                <p>Explore, model, and predict smartphone app usage behavior in this data project. Leveraging a rich real-world dataset from 12k+ users, I developed a novel multivariate time-series deep-learning model based on Hierarchical Attention Networks (HAN) to accurately forecast users' weekly app usage. The model outperforms baseline models, including persistence and simple GRU/LSTM cells. Uncovering insights into usage patterns and the potential for identifying problematic smartphone usage.</p>
-                <div class="w3-row">
-                    <div class="w3-col m8 s12">
-                      <!-- read more -->
-                        <a href="html/project1.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-
-        <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin w3-white">
-          <!-- Image -->
-          <img src="images\MBCH.png" alt="">
-          <div class="w3-container">
-              <!-- title with link -->
-              <h3><b><a href="html/project2.html">Measuring Behavioral Change within Mobile App Usage</a></b></h3>
-              <!-- type & date -->
-              <h5>Project, <span class="w3-opacity">Summer 2022</span></h5>
-              <!-- description -->
-              <p>Explore the world of time series analysis and its practical applications in mobile app usage behavior. Leveraging data from 10k+ smartphone users, this project unveils insights into daily screen time, check frequency, and app usage trends. Discover key findings, including the superiority of the Facebook Prophet model in forecasting daily check numbers and adapting to change points compared to seasonal ARIMA.</p>
-              <div class="w3-row">
-                  <div class="w3-col m8 s12">
-                      <!-- read more -->                    
-                      <a href="html/project2.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <hr>
-
-        <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin w3-white">
-          <!-- Image -->
-          <img src="images\IMDB.png" alt="">
-          <div class="w3-container">
-              <!-- title with link -->
-              <h3><b><a href="html/project3.html">IMDb Reviews Binary Sentiment Classifier</a></b></h3>
-              <!-- type & date -->
-              <h5>Project, <span class="w3-opacity">Jan. 2022</span></h5>
-              <!-- description -->
-              <p>Developed a state-of-the-art IMDb movie review sentiment classifier. Leveraging the power of the Hugging Face Transformer framework, this machine learning model, based on BERT, automatically categorizes reviews into positive or negative sentiments. Emphasizing MLOps practices, from data prep to deployment.</p>
-              <div class="w3-row">
-                  <div class="w3-col m8 s12">
-                      <!-- read more -->
-                    <a href="html/project3.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <hr>
-
-        <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin w3-white">
-            <!-- Image -->
-            <img src="images\ICDL.png" alt="">
-            <div class="w3-container">
-                <!-- title with link -->
-                <h3><b><a href="html/project5.html">Deep Learning Image Colorization</a></b></h3>
-                <!-- type & date -->
-                <h5>Project, <span class="w3-opacity">Fall 2021</span></h5>
-                <!-- description -->
-                <p>Explore the world of Deep Learning Image Colorization with this project. Using Convolutional Neural Networks (CNNs) and conditional Generator-Discriminator pipelines, including Attention U-Net and GAN architectures, we tackle the complex task of predicting color channels from grayscale inputs. Our project evaluates model performance using computer vision metrics like PSNR, SSIM, and LPIPS. Dive into the challenging realm of colorization with our exploration of L·a·b Color Space and discover the optimal model for grayscale image colorization.</p>
-                <div class="w3-row">
-                    <div class="w3-col m8 s12">
-                        <!-- read more -->
-                      <a href="html/project5.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-
-        <!-- Blog entry -->
-        <div class="w3-card-4 w3-margin w3-white">
-          <!-- Image -->
-          <img src="images\NYC_CC.jpg" alt="">
-          <div class="w3-container">
-              <!-- title with link -->
-              <h3><b><a href="html/project4.html">New York City Car Collision Prediction</a></b></h3>
-              <!-- type & date -->
-              <h5>Project, <span class="w3-opacity">Spring 2021</span></h5>
-              <!-- description -->
-              <p>Focusing on predicting car collisions in New York City using traditional machine learning techniques. This data-driven project investigates contributing factors to offer insights for accident prevention. Experience interactive data storytelling and visualization through thoughtfully designed dashboards.</p>
-              <div class="w3-row">
-                  <div class="w3-col m8 s12">
-                      <!-- read more -->
-                      <a href="html/project4.html"><p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p></a>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <hr>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top smaller-text">
-        <!-- Contacts -->
-        <div class="contact-links">
-            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
-        </div>
-        <!-- Year -->
-        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
-    </footer>
-
-    <!-- Script for the year -->
-    <script>
-        // JavaScript code to update the year
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Script for the typing -->
-    <script>
-        // Initialize typed.js
-        var options = {
-            strings: ["I'm a Data Scientist", "Passionate about data", "Analyzing trends", "Building models",""],
-            typeSpeed: 50, // typing speed in milliseconds
-            backSpeed: 25, // backspacing speed in milliseconds
-            backDelay: 1500, // delay before starting to backspace
-            showCursor: false, // show blinking cursor
-            cursorChar: "|", // cursor character
-            onComplete: function (self) {
-                // Reset the Typed instance to start again
-                self.reset();
-            },
-        };
-        var typed = new Typed("#typing-text", options);
-    </script>
-
+<body>
+<header class="site-header">
+<nav aria-label="Main navigation" class="container navigation">
+<a aria-label="Abdul Kousa home" class="logo" href="index.html">Abdul Kousa<span>.</span></a>
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#writing">Writing</a>
+<a href="about_me.html">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<section aria-labelledby="intro-title" class="container hero home-hero">
+<img alt="Portrait of Abdul Kousa" class="portrait" fetchpriority="high" height="320" src="images/Abdulstar_Kousa.png" width="320"/>
+<h1 id="intro-title">Welcome to my <span class="welcome-tag">AI &amp; data science</span> portfolio</h1>
+<div class="typing-container">
+<p class="typing-text" aria-hidden="true"><span id="typing-text">I'm an AI &amp; Data Consultant</span><span class="typing-cursor">|</span></p>
+<p class="sr-only">I'm an AI &amp; Data Consultant. Passionate about data. Analyzing trends. Building models. Solving business needs.</p>
+</div>
+</section>
+<section aria-labelledby="work-title" class="container section" id="work">
+<div class="section-heading">
+<h2 id="work-title">Selected work</h2>
+<p>A mix of personal and academic projects.</p>
+</div>
+<div class="work-grid">
+<article class="work-card">
+<div aria-label="Abstract financial analytics project illustration" class="work-visual project-private" role="img">
+<span class="symbol">{ data → insight }</span>
+<span class="sub">Personal project · In progress</span>
+</div>
+<div class="work-content">
+<div class="project-kicker">Financial analytics · Personal project</div>
+<h3>Personal Finance &amp; Investment Analytics</h3>
+<p>Building a personal platform for monitoring investments, organising financial data and exploring AI-assisted insights. A public case study is in preparation.</p>
+<span class="project-link">Case study coming soon</span>
+</div>
+</article>
+<article class="work-card">
+<img alt="Smartphone usage forecasting project visual" class="work-visual" loading="lazy" src="images/EMFSAU.png"/>
+<div class="work-content">
+<div class="project-kicker">Master's thesis · 2022</div>
+<h3>Forecasting Smartphone App Usage</h3>
+<p>Built a multivariate time-series deep learning model using behavioural data from more than 12,000 users to forecast app usage.</p>
+<a class="project-link" href="html/project1.html">Read case study →</a>
+</div>
+</article>
+<article class="work-card">
+<img alt="IMDb sentiment classification project visual" class="work-visual" loading="lazy" src="images/IMDB.png"/>
+<div class="work-content">
+<div class="project-kicker">NLP &amp; MLOps · 2022</div>
+<h3>IMDb Sentiment Classifier</h3>
+<p>Used BERT and Hugging Face Transformers to classify film-review sentiment, with attention to the model development workflow.</p>
+<a class="project-link" href="html/project3.html">Read case study →</a>
+</div>
+</article>
+<article class="work-card">
+<img alt="Mobile app behaviour analysis project visual" class="work-visual" loading="lazy" src="images/MBCH.png"/>
+<div class="work-content">
+<div class="project-kicker">Time series · 2022</div>
+<h3>Understanding Changes in Mobile App Usage</h3>
+<p>Analysed smartphone behaviour and compared forecasting methods to understand trends and changes in app usage.</p>
+<a class="project-link" href="html/project2.html">Read case study →</a>
+</div>
+</article>
+<article class="work-card">
+<img alt="Deep learning image colorization project visual" class="work-visual" loading="lazy" src="images/ICDL.png"/>
+<div class="work-content">
+<div class="project-kicker">Computer Vision &middot; 2021</div>
+<h3>Deep Learning Image Colorization</h3>
+<p>Explored neural network architectures for turning grayscale images into plausible colour images, comparing reconstruction quality and perceptual similarity.</p>
+<a class="project-link" href="html/project5.html">Read case study &rarr;</a>
+</div>
+</article>
+<article class="work-card">
+<img alt="New York City car collision prediction project visual" class="work-visual" loading="lazy" src="images/NYCCC.png"/>
+<div class="work-content">
+<div class="project-kicker">Machine Learning &middot; 2021</div>
+<h3>New York City Car Collision Prediction</h3>
+<p>Combined collision records, weather and speed-limit data to explore road safety patterns and model accident severity.</p>
+<a class="project-link" href="html/project4.html">Read case study &rarr;</a>
+</div>
+</article>
+</div>
+</section>
+<section aria-labelledby="writing-title" class="container section" id="writing">
+<div class="section-heading">
+<h2 id="writing-title">Writing</h2>
+<p>Thoughts on AI, data and putting ideas into practice.</p>
+</div>
+<div class="writing-placeholder">
+<p class="project-kicker">Articles &amp; essays</p>
+<h3>More ideas to share.</h3>
+<p>I'll share articles here on AI, data science and lessons from building practical solutions, including writing published on Medium and other platforms.</p>
+<span class="writing-status">Articles coming soon</span>
+</div>
+</section>
+<section aria-labelledby="about-title" class="container section">
+<div class="about-panel">
+<div>
+<h2 id="about-title">Building practical AI &amp; data solutions for real-world problems.</h2>
+<p>I'm Abdul Kousa, an AI &amp; Data Consultant at EY, working in financial services in Denmark.</p>
+</div>
+<a class="button" href="about_me.html">Continue reading &rarr;</a>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+<div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links">
+<a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" rel="noopener noreferrer" target="_blank"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" rel="noopener noreferrer" target="_blank"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a>
+</div>
+</div>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+<script src="scripts/typing.js" defer></script>
 </body>
 </html>

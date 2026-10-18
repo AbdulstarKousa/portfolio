@@ -1,130 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measuring Behavioral Change Within Mobile App Usage</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body, h1, h2, h3, h4, h5 {
-            font-family: "Raleway", sans-serif;
-        }
-
-        .header-with-margin {
-            margin: 40px; /* Set the margin to match the cards */
-            background-color: #f1f1f1;
-        }
-
-        .w3-card-4 {
-            display: flex;
-            flex-direction: row;
-            margin: 20px; /* Adjust margin as needed */
-            background-color: white; /* Set the background color */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            border-radius: 4px; /* Add rounded corners */
-        }
-
-        .w3-card-4 img {
-            flex: 1;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .w3-container {
-            flex: 2;
-            padding: 20px;
-            text-align: left; /* Align text to the left */
-        }
-
-        .highlighted-text {
-            font-size: 17.5px;
-            color: #0d8f38;
-        }
-
-        .contact-links {
-            margin-top: 10px;
-        }
-
-        .contact-links a {
-            margin: 0 10px;
-            color: #f1f1f1;
-        }
-    
-        .smaller-text {
-            font-size: 12px; /* Adjust the font size as needed */
-        }
-
-    </style>
-</head>
-
-<body class="w3-light-grey">
-    <!-- Navigation Bar -->
-    <div class="w3-top w3-bar w3-dark-grey w3-card">
-        <a class="w3-bar-item w3-button" href="../index.html">
-            <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
-        </a>
-        <div class="w3-right"> <!--w3-hide-small-->
-            <a href="../index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="../index.html#projects" class="w3-bar-item w3-button">Projects</a>
-            <a href="../about_me.html" class="w3-bar-item w3-button">About Me</a>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="w3-container w3-center w3-padding-32 header-with-margin" style="margin-top: 50px;">
-        <img src="..\images\MBCH.png" alt="" style="max-width: 150px; border-radius: 50%;">
-        <h1><b>Measuring Behavioral Change Within Mobile App Usage</b></h1>
-        <p style="text-align: left;"><strong>Overview:</strong></p>
-        <p style="text-align: left;">In the realm of time series analysis, understanding the nature of data is the first step towards developing reliable forecasts. This project focuses on univariate time series analysis, covering data preparation, visualization, in-depth analysis, and precise forecasting. The project provides valuable insights into time series analysis techniques and their practical applications in forecasting and detecting behavioral changes within mobile app usage.</p>
-        <p style="text-align: left;"><strong>Data Sources:</strong></p>
-        <p style="text-align: left;">The project harnessed data from a real world sample of nearly 10,000 smartphone users. This dataset provided insights into users' daily screen time, number of checks, and number of applications over time.</p>
-        <p style="text-align: left;"><strong>Tools and Technologies Used:</strong></p>
-        <p style="text-align: left;">The project employed a range of techniques and models, including:</p>
-        <ul>
-            <li style="text-align: left;">Outliers detection</li>
-            <li style="text-align: left;">Missing values imputation</li>
-            <li style="text-align: left;">Auto-correlation analysis</li>
-            <li style="text-align: left;">Rolling windows analysis</li>
-            <li style="text-align: left;">Stationarity tests</li>
-            <li style="text-align: left;">Power transformations</li>
-            <li style="text-align: left;">Seasonal ARIMA for forecasting</li>
-            <li style="text-align: left;">Facebook Prophet for forecasting</li>
-            <li style="text-align: left;">Pruned Exact Linear Time (PELT) for change point detection</li>
-        </ul>
-        <p style="text-align: left;"><strong>Key Findings:</strong></p>
-        <ul>
-            <li style="text-align: left;">Explored various methods for detecting change points in time series data.</li>
-            <li style="text-align: left;">Prophet outperformed both the persistence model and seasonal ARIMA in forecasting 30 days of daily number of checks, with the superiority validated through an experiment involving 300 different users.</li>
-            <!-- Add more key findings as needed -->
-        </ul>
-        <p style="text-align: left;"><strong>Learn More:</strong></p>
-        <p style="text-align: left;">For a comprehensive exploration of this project, including methodologies, code, detailed results, and potential future directions, please refer <a href="https://bit.ly/Abdul-MobileAppUsageChange">here</a>.</p>
-    </header>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top smaller-text">
-        <!-- Contacts -->
-        <div class="contact-links">
-            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
-        </div>
-        <!-- Year -->
-        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
-    </footer>
-    
-    <!-- Script for the year -->
-    <script>
-        // JavaScript code to update the year
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
+<meta name="description" content="Exploring smartphone behaviour with time-series analysis, change-point detection and forecasting using Prophet and seasonal ARIMA.">
+<meta property="og:type" content="article"><meta property="og:title" content="Detecting changes in everyday app usage. | Abdul Kousa">
+<meta property="og:description" content="Exploring smartphone behaviour with time-series analysis, change-point detection and forecasting using Prophet and seasonal ARIMA.">
+<link rel="canonical" href="https://www.abdulkousa.com/html/project2.html">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../styles/site.css?v=social-icons-3">
+<title>Detecting changes in everyday app usage. | Abdul Kousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
+  <a href="../index.html" class="logo" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
+  <div class="nav-links"><a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><a href="../index.html#writing">Writing</a><span class="sep" aria-hidden="true">/</span>Detecting changes in everyday app usage.</div>
+<section class="container case-hero" aria-labelledby="case-title"><div>
+<p class="eyebrow">Time-series analysis · Research project · 2022</p>
+<h1 id="case-title">Detecting changes in everyday app usage.</h1>
+<p class="case-lead">Understanding how smartphone habits evolve by preparing, analysing and forecasting daily behavioural signals across a large user sample.</p>
+<div class="hero-actions"><a class="button" href="https://github.com/AbdulstarKousa/Measuring-behavioral-change-within-mobile-app-usage" target="_blank" rel="noopener noreferrer">View project repository ↗</a><a class="text-link" href="#approach">Explore the approach ↓</a></div>
+</div><aside class="case-meta" aria-label="Project at a glance">
+<div class="meta-row"><p class="meta-label">Dataset</p><p class="meta-value">Nearly 10,000 smartphone users</p></div>
+<div class="meta-row"><p class="meta-label">Focus</p><p class="meta-value">Daily app usage and behaviour change</p></div>
+<div class="meta-row"><p class="meta-label">Methods</p><p class="meta-value">Prophet · SARIMA · PELT</p></div>
+</aside></section>
+<section class="container" aria-label="High-level project workflow"><div class="case-visual">
+<div class="visual-top"><p>Time-series analysis workflow</p><span>Conceptual overview · simplified for presentation</span></div>
+<div class="pipeline">
+<div class="pipe"><i>01 / OBSERVE</i><strong>Daily usage signals</strong></div>
+<div class="pipe"><i>02 / PREPARE</i><strong>Clean &amp; transform</strong></div>
+<div class="pipe"><i>03 / COMPARE</i><strong>Forecasting methods</strong></div>
+<div class="pipe"><i>04 / DETECT</i><strong>Behaviour changes</strong></div>
+</div><p class="visual-caption">A simplified sequence of analysis steps; the original report contains the actual experiments and details.</p></div></section>
+<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><p class="section-label">01 / The challenge</p><h2 id="challenge-title">A changing habit is difficult to forecast.</h2></div><div class="body-copy"><p>Daily screen time, phone-check frequency and app usage can fluctuate substantially. Missing observations, seasonality and shifts in behaviour complicate the interpretation of a single time series.</p><p>The goal was to explore how statistical analysis and forecasting can help distinguish recurring patterns from meaningful changes in usage.</p></div></section>
+<section class="container case-section" id="approach" aria-labelledby="approach-title"><p class="section-label">02 / The approach</p><h2 id="approach-title">From noisy activity to interpretable trends.</h2><p>The project used exploratory time-series analysis, data preparation and forecasting benchmarks to understand behaviour over time.</p><div class="method-grid">
+<article class="method-card"><p class="num">01 / PREPARE</p><h3>Make the signals usable</h3><p>Detect outliers, fill missing observations, examine rolling windows, and explore transformations and stationarity.</p></article>
+<article class="method-card"><p class="num">02 / FORECAST</p><h3>Compare forecasting approaches</h3><p>Evaluate a persistence baseline, seasonal ARIMA and Prophet on daily numbers of phone checks.</p></article>
+<article class="method-card"><p class="num">03 / CHANGES</p><h3>Investigate shifts</h3><p>Use change-point analysis, including PELT, to explore potential changes in smartphone behaviour.</p></article>
+</div></section>
+<section class="container case-section content-grid" aria-labelledby="findings-title"><div><p class="section-label">03 / The findings</p><h2 id="findings-title">What the experiments indicated.</h2></div><div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">↗</span><div><h3>Prophet performed best in the reported comparison</h3><p>The original project reports that Prophet outperformed persistence and seasonal ARIMA for forecasting 30 days of phone-check counts across an experiment involving 300 users.</p></div></div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">◎</span><div><h3>Context matters for time-series analysis</h3><p>Exploring seasonality, autocorrelation and missing data helped build a better understanding of the behavioural signals before modelling.</p></div></div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">◇</span><div><h3>Change detection extends the analysis</h3><p>Change-point methods offered a complementary perspective to forecasting by looking for shifts in usage patterns.</p></div></div>
+<div class="callout"><strong>Evidence note:</strong> The comparative result applies to the specific metric, dataset and experiment described in the original work, not a universal ranking of forecasting tools.</div>
+</div></section>
+<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><p class="section-label">04 / The takeaway</p><h2 id="takeaway-title">The simplest baseline deserves a seat at the table.</h2></div><div class="body-copy"><p>Forecasting is a comparison problem, not just a modelling problem. Testing a method against plausible alternatives matters more than choosing the most fashionable algorithm.</p><p>The project also reinforced the value of careful preprocessing and communicating what can, and cannot, be inferred from behavioural data.</p></div></section>
+<section class="container" aria-labelledby="resources-title"><div class="resource-panel"><div><h2 id="resources-title">Explore the original analysis.</h2><p>Read the source project for the full methodology, change-point work and forecasting experiments.</p></div>
+<a class="button" href="https://github.com/AbdulstarKousa/Measuring-behavioral-change-within-mobile-app-usage" target="_blank" rel="noopener noreferrer">View project repository ↗</a></div>
+<div class="case-next"><a href="../index.html#work">← Back to all work</a><a href="project4.html">Next: NYC collision analysis →</a></div>
+</section></main><footer class="site-footer" id="contact"><div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a></div>
+</div></footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>

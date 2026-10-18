@@ -1,131 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New York City Car Collision Prediction</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body, h1, h2, h3, h4, h5 {
-            font-family: "Raleway", sans-serif;
-        }
-
-        .header-with-margin {
-            margin: 40px; /* Set the margin to match the cards */
-            background-color: #f1f1f1;
-        }
-
-        .w3-card-4 {
-            display: flex;
-            flex-direction: row;
-            margin: 20px; /* Adjust margin as needed */
-            background-color: white; /* Set the background color */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-            border-radius: 4px; /* Add rounded corners */
-        }
-
-        .w3-card-4 img {
-            flex: 1;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .w3-container {
-            flex: 2;
-            padding: 20px;
-            text-align: left; /* Align text to the left */
-        }
-
-        .highlighted-text {
-            font-size: 17.5px;
-            color: #0d8f38;
-        }
-
-        .contact-links {
-            margin-top: 10px;
-        }
-
-        .contact-links a {
-            margin: 0 10px;
-            color: #f1f1f1;
-        }
-    
-        .smaller-text {
-           font-size: 12px; /* Adjust the font size as needed */
-        }
-
-    </style>
-</head>
-
-<body class="w3-light-grey">
-    <!-- Navigation Bar -->
-    <div class="w3-top w3-bar w3-dark-grey w3-card">
-        <a class="w3-bar-item w3-button" href="../index.html">
-            <img src="../images/Abdulstar_Kousa.png" alt="Abdul Kousa" style="max-width: 30px; border-radius: 50%;">
-        </a>
-        <div class="w3-right"> <!--w3-hide-small-->
-            <a href="../index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="../index.html#projects" class="w3-bar-item w3-button">Projects</a>
-            <a href="../about_me.html" class="w3-bar-item w3-button">About Me</a>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="w3-container w3-center w3-padding-32 header-with-margin" style="margin-top: 50px;">
-        <img src="..\images\NYC_CC.jpg" alt="" style="max-width: 150px; border-radius: 50%;">
-        <h1><b>New York City Car Collision Prediction</b></h1>
-        <p style="text-align: left;"><strong>Overview:</strong></p>
-        <p style="text-align: left;">In this master's Project, I delved into predicting dangerous car accidents in New York City achieving over 60% accuracy using traditional machine learning techniques. The project aimed to provide data-driven insights into the core reasons and contributing factors behind these accidents.</p>
-        <p style="text-align: left;"><strong>Data Sources:</strong></p>
-        <p style="text-align: left;">The project Utilized multiple data sources: the NYC Motor Vehicle Collisions - Crashes dataset, Weather data, and Speed Limit data.</p>
-        <p style="text-align: left;"><strong>Tools and Technologies Used:</strong></p>
-        <p style="text-align: left;">The project employed a range of techniques and models, including:</p>
-        <ul>
-            <li style="text-align: left;">Data integration from multiple sources</li>
-            <li style="text-align: left;">Comprehensive data processing and cleaning, addressing issues like missing data and feature preparation</li>
-            <li style="text-align: left;">In-depth data analysis, visualization, and storytelling using Matplotlib and web-based presentations</li>
-            <li style="text-align: left;">Exploration of temporal patterns, geographic hotspots via map plotting (Folium), and accident severity trend analysis</li>
-            <li style="text-align: left;">Development of interactive dashboards (Bokeh)</li>
-            <li style="text-align: left;">Implementation of effective data storytelling and visualization methods</li>
-            <li style="text-align: left;">Implementation of class balance methods</li>
-            <li style="text-align: left;">Development of a data preprocessor pipeline</li>
-            <li style="text-align: left;">Leveraging traditional machine learning models like Logistic Regression, Random Forest Classifier, and Decision Tree Classifier</li>
-            <li style="text-align: left;">Assessment of feature importance</li>
-        </ul>
-        <p style="text-align: left;"><strong>Key Highlights:</strong></p>
-        <ul>
-            <li style="text-align: left;">Developed a machine learning model to predict the severity of car accidents.</li>
-            <li style="text-align: left;">Designed a website with interactive dashboards for data storytelling and visualization.</li>
-            <li style="text-align: left;">Explored important features contributing to severe accidents, such as street names, vehicle types, and weather conditions and identified key insights for accident prevention.</li>
-        </ul>
-        <p style="text-align: left;"><strong>Learn More</strong></p>
-        <p style="text-align: left;">For an in-depth and interactive exploration of this project, including methodologies, code, and more, please visit the project website <a href="https://bit.ly/Abdul-NYCCarCollisions">here.</a>.</p>
-    </header>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top smaller-text">
-        <!-- Contacts -->
-        <div class="contact-links">
-            <i class="fa fa-envelope"></i> <a href="mailto:abdul.kousa@gmail.com">abdul.kousa@gmail.com</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-linkedin-square"></i> <a href="https://www.linkedin.com/in/abdul-kousa/">abdul-kousa</a>
-        </div>
-        <div class="contact-links">
-            <i class="fa fa-github"></i> <a href="https://github.com/AbdulstarKousa">AbdulstarKousa</a>
-        </div>
-        <!-- Year -->
-        <p>&copy; <span id="currentYear"></span> Abdul Kousa</p>
-    </footer>
-    
-    <!-- Script for the year -->
-    <script>
-        // JavaScript code to update the year
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
+<meta name="description" content="Exploring New York City motor vehicle collisions with multi-source data, mapping, interactive visualisations and machine learning.">
+<meta property="og:type" content="article"><meta property="og:title" content="Understanding serious collisions in New York City. | Abdul Kousa">
+<meta property="og:description" content="Exploring New York City motor vehicle collisions with multi-source data, mapping, interactive visualisations and machine learning.">
+<link rel="canonical" href="https://www.abdulkousa.com/html/project4.html">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../styles/site.css?v=social-icons-3">
+<title>Understanding serious collisions in New York City. | Abdul Kousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
+  <a href="../index.html" class="logo" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
+  <div class="nav-links"><a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#writing">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+<div class="container breadcrumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><a href="../index.html#writing">Writing</a><span class="sep" aria-hidden="true">/</span>Understanding serious collisions in New York City.</div>
+<section class="container case-hero" aria-labelledby="case-title"><div>
+<p class="eyebrow">Data science · Predictive modelling · 2021</p>
+<h1 id="case-title">Understanding serious collisions in New York City.</h1>
+<p class="case-lead">Combining collision records, weather and speed-limit data to examine road safety patterns and experiment with models of accident severity.</p>
+<div class="hero-actions"><a class="button" href="https://bit.ly/Abdul-NYCCarCollisions" target="_blank" rel="noopener noreferrer">Open original project ↗</a><a class="text-link" href="#approach">Explore the approach ↓</a></div>
+</div><aside class="case-meta" aria-label="Project at a glance">
+<div class="meta-row"><p class="meta-label">Data</p><p class="meta-value">NYC collisions · Weather · Speed limits</p></div>
+<div class="meta-row"><p class="meta-label">Analysis</p><p class="meta-value">Patterns and geographic hotspots</p></div>
+<div class="meta-row"><p class="meta-label">Methods</p><p class="meta-value">Logistic regression · Trees · Random forest</p></div>
+</aside></section>
+<section class="container" aria-label="High-level project workflow"><div class="case-visual">
+<div class="visual-top"><p>Exploration and modelling workflow</p><span>Conceptual overview · simplified for presentation</span></div>
+<div class="pipeline">
+<div class="pipe"><i>01 / COLLECT</i><strong>Multiple NYC datasets</strong></div>
+<div class="pipe"><i>02 / PREPARE</i><strong>Clean &amp; join features</strong></div>
+<div class="pipe"><i>03 / EXPLORE</i><strong>Maps &amp; dashboards</strong></div>
+<div class="pipe"><i>04 / MODEL</i><strong>Severity classification</strong></div>
+</div><p class="visual-caption">Conceptual summary of the documented project, rather than a live operational risk-scoring system.</p></div></section>
+<section class="container case-section content-grid" aria-labelledby="challenge-title"><div><p class="section-label">01 / The challenge</p><h2 id="challenge-title">Public datasets seldom fit neatly together.</h2></div><div class="body-copy"><p>Road accidents happen in a wider context. Location, timing, traffic conditions and weather may all matter, but the relevant information is spread across multiple sources.</p><p>The project combined descriptive analysis with predictive modelling, seeking to understand accident-severity patterns and present the findings in a format people could explore.</p></div></section>
+<section class="container case-section" id="approach" aria-labelledby="approach-title"><p class="section-label">02 / The approach</p><h2 id="approach-title">Integrate data. Map patterns. Test models.</h2><p>The work linked exploratory analysis with interactive data storytelling and traditional supervised machine learning.</p><div class="method-grid">
+<article class="method-card"><p class="num">01 / INTEGRATE</p><h3>Build a usable dataset</h3><p>Combine NYC collision records with weather and speed-limit data, then prepare the features and address missing values.</p></article>
+<article class="method-card"><p class="num">02 / EXPLORE</p><h3>Make patterns visible</h3><p>Investigate temporal trends, geographic hotspots and contributing factors using plotting, Folium maps and Bokeh dashboards.</p></article>
+<article class="method-card"><p class="num">03 / MODEL</p><h3>Compare classical classifiers</h3><p>Experiment with logistic regression, decision trees and random forests while considering class balance and feature importance.</p></article>
+</div></section>
+<section class="container case-section content-grid" aria-labelledby="findings-title"><div><p class="section-label">03 / The findings</p><h2 id="findings-title">What the project delivered.</h2></div><div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">▦</span><div><h3>Explorable patterns</h3><p>The project produced visual analyses and interactive dashboards around collision patterns and accident severity.</p></div></div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">◇</span><div><h3>A supervised modelling approach</h3><p>It experimented with classification methods to assess accident severity using features from multiple data sources.</p></div></div>
+<div class="finding"><span class="finding-mark" aria-hidden="true">◎</span><div><h3>Features worth investigating</h3><p>The original write-up discusses contextual variables such as location, vehicle type and weather as potentially relevant signals.</p></div></div>
+<div class="callout"><strong>Evidence note:</strong> The old project page reports accuracy above 60%, but without the associated class balance and evaluation definition here, that percentage is not presented as an overall quality claim. Observed associations are not proof of causation.</div>
+</div></section>
+<section class="container case-section content-grid" aria-labelledby="takeaway-title"><div><p class="section-label">04 / The takeaway</p><h2 id="takeaway-title">Good analysis is more than a prediction.</h2></div><div class="body-copy"><p>The project demonstrates the value of combining data engineering, modelling and visual storytelling. A model score is only one part of making a dataset useful.</p><p>Presenting limitations and helping readers explore the underlying patterns can be just as important as selecting a particular algorithm.</p></div></section>
+<section class="container" aria-labelledby="resources-title"><div class="resource-panel"><div><h2 id="resources-title">See the original visual story.</h2><p>The original project link contains the deeper interactive exploration, technical details and supporting analysis.</p></div>
+<a class="button" href="https://bit.ly/Abdul-NYCCarCollisions" target="_blank" rel="noopener noreferrer">Open original project ↗</a></div>
+<div class="case-next"><a href="../index.html#work">← Back to all work</a><a href="project5.html">Next: Image colorization →</a></div>
+</section></main><footer class="site-footer" id="contact"><div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a></div>
+</div></footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>
