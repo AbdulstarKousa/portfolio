@@ -24,6 +24,8 @@
     .site-header { background: #000000; border-bottom: 1px solid #555555; }
     .navigation { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .logo { font-size: 1.14rem; font-weight: 800; letter-spacing: -0.045em; white-space: nowrap; }
+    .site-header .logo { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .brand-mark { display: block; width: 58px; height: 40px; object-fit: cover; object-position: center 70%; flex-shrink: 0; }
     .logo span { color: var(--accent); }
     .nav-links { display: flex; align-items: center; gap: clamp(14px,3vw,32px); font-size: .9rem; font-weight: 600; color: #555555; }
     .nav-links a { white-space: nowrap; }
