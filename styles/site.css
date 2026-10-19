@@ -256,14 +256,11 @@
 .article-reading { max-width: 960px; padding-bottom: 16px; }
 .article-reading header { padding-block: 32px 40px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
 .article-reading h1 { font-size: clamp(1.35rem, 2.2vw, 1.6rem); line-height: 1.25; letter-spacing: -.015em; margin: 14px 0 18px; }
-.article-reading .article-deck { font-size: 1rem; line-height: 1.75; color: #555555; }
 .article-reading .writing-meta { font-size: .85rem; color: var(--muted); margin-bottom: 0; }
 .article-body { max-width: 820px; line-height: 1.8; color: #555555; overflow-wrap: break-word; }
 .article-body h2 { font-size: 1.2rem; line-height: 1.4; letter-spacing: -.01em; color: var(--ink); margin: 32px 0 24px; padding-top: 24px; border-top: 1px solid var(--line); }
-.article-body h3 { font-size: 1.2rem; margin-top: 32px; }
 .article-body li { margin-bottom: 10px; }
 .notebook-link { display: inline-flex; align-items: center; gap: 6px; }
-.article-body hr { border: 0; border-top: 1px solid var(--line); margin: 36px 0; }
 .article-body .article-lesson { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: .93rem; }
 .article-resources { margin-top: 32px; padding: 24px; background: #eaf0fa; border-radius: var(--radius); }
 .article-resources h2 { margin: 0 0 9px; padding: 0; border: 0; }
