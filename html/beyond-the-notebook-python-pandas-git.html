@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
+<meta name="description" content="Three lessons about writing understandable code, trusting data, and building things that others can maintain.">
+<meta property="og:type" content="article"><meta property="og:title" content="Lessons from Python, Pandas, and Git | Abdul Kousa">
+<meta property="og:description" content="Three lessons about writing understandable code, trusting data, and building things that others can maintain.">
+<link rel="canonical" href="https://www.abdulkousa.com/html/beyond-the-notebook-python-pandas-git.html">
+<link rel="icon" href="../images/abdul-kousa-tab-icon.png" type="image/png"/>
+<link rel="stylesheet" href="../styles/site.css?v=neutral-links-1">
+<title>Lessons from Python, Pandas, and Git | Abdul Kousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<meta property="og:image" content="https://www.abdulkousa.com/images/abdul-kousa-ai-data-consultant.png"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="578"/>
+<meta property="og:image:height" content="869"/>
+<meta property="og:image:alt" content="Portrait of Abdul Kousa, AI &amp; Data Consultant"/>
+<meta property="og:site_name" content="Abdul Kousa"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.abdulkousa.com/images/abdul-kousa-ai-data-consultant.png"/>
+<meta name="twitter:image:alt" content="Portrait of Abdul Kousa, AI &amp; Data Consultant"/>
+<meta property="og:url" content="https://www.abdulkousa.com/html/beyond-the-notebook-python-pandas-git.html"/>
+</head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
+  <a href="../index.html" class="logo" aria-label="Abdul Kousa home">Abdul Kousa<span>.</span></a>
+  <div class="nav-links"><a href="../index.html#work">Projects</a><a href="../index.html#writing" aria-current="page">Writing</a><a href="../about_me.html">About</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main class="container article-reading">
+<div class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html#writing">Writing</a><span class="sep" aria-hidden="true">/</span>Lessons from Python, Pandas, and Git</div>
+<article aria-labelledby="article-title">
+<header>
+<p class="eyebrow">Writing &middot; Engineering reflections</p>
+<h1 id="article-title">Lessons from Python, Pandas, and Git</h1>
+<p class="article-deck"><em>Reflections on learning, teaching, and working with data.</em></p>
+<p class="writing-meta">By Abdul Kousa &middot; 5 min read &middot; Experience sharing</p>
+</header>
+<div class="article-body">
+<p>When I started working with Python and data science, much of my attention was on learning the tools: writing code, manipulating data, building models, and getting things to work.</p>
+<p>Over time, through projects and preparing teaching materials, I started appreciating something else.</p>
+<p>The tools themselves are important, but the habits you develop while using them matter even more.</p>
+<p>Looking back at my Python, Pandas, and Git notebooks, three lessons stand out.</p>
+<h2>1. Python: Understanding beats memorising</h2>
+<p>Python was my entry point into practical data science.</p>
+<p>I spent time exploring the fundamentals: data structures, functions, classes, NumPy, and visualisation with Matplotlib.</p>
+<p>One thing I came to appreciate is that knowing Python syntax isn't the same as understanding how a program runs and behaves.</p>
+<p>That means following a program step by step, understanding why some data structures are faster for particular tasks, and knowing when vectorised operations in libraries such as Pandas can replace Python loops with efficient compiled code. Understanding how and why code runs is more useful than memorising syntax.</p>
+<p>Jupyter Notebooks are a good example. They're excellent for experimentation, but they also make it easy to execute cells out of order, depend on hidden variables, or end up with code that only works in your current session.</p>
+<p>A notebook that runs isn't necessarily a notebook that someone else can reproduce.</p>
+<p class="article-lesson"><strong>The lesson:</strong> Write code for understanding and reproducibility, not just for getting the expected output.</p>
+<h2>2. Pandas: Understand your data before analysing it</h2>
+<p>Pandas makes data manipulation surprisingly accessible. A few lines of code can filter thousands of records, calculate statistics, or produce visualisations.</p>
+<p>But that convenience introduces another challenge: it's easy to generate convincing results without understanding the underlying data.</p>
+<p>In my Pandas tutorial, I used the Titanic dataset to explore some fundamental operations: inspecting columns, examining data types, identifying missing values, filtering observations, and aggregating data.</p>
+<p>These might seem like basic tasks. Yet they're often where important analytical decisions begin.</p>
+<p>What does a missing value represent? Does a group average tell the whole story? Are we comparing populations that are genuinely comparable?</p>
+<p>The more I worked with data, the more I appreciated the importance of asking these questions before moving on to modelling.</p>
+<p class="article-lesson"><strong>The lesson:</strong> A good analysis begins with curiosity about the data, not with selecting an algorithm.</p>
+<h2>3. Git: Good engineering is also about collaboration</h2>
+<p>Git introduced a different dimension to working with code.</p>
+<p>At first glance, version control is about commands: add, commit, push, pull, branch, and merge.</p>
+<p>But its real value is much broader.</p>
+<p>It provides a way to experiment without losing previous work, understand why something changed, and collaborate without everyone overwriting each other's contributions.</p>
+<p>The concepts behind Git, such as making small logical commits, working in branches, and resolving conflicts, are valuable beyond software development. They encourage a more structured approach to technical work.</p>
+<p>And as projects become larger, these habits become increasingly important.</p>
+<p class="article-lesson"><strong>The lesson:</strong> Code shouldn't just work today. It should be understandable, maintainable, and safe to change tomorrow.</p>
+<h2>Bringing the three together</h2>
+<p>None of these lessons is particularly glamorous. They don't involve the latest model architecture or a groundbreaking algorithm.</p>
+<p>Yet they form part of the foundation for more advanced work, whether that's developing machine learning systems, building data products, or experimenting with AI agents.</p>
+<p>As my interests have evolved toward applied AI and engineering, I've found these fundamentals increasingly relevant.</p>
+<p>Technology changes quickly. Good working habits tend to last much longer.</p>
+<section class="article-resources" aria-labelledby="learning-resources-title">
+<h2 id="learning-resources-title">Learning resources</h2>
+<p>These reflections were inspired by three notebooks I've worked with over the years:</p>
+<ul>
+<li><a class="notebook-link" href="https://github.com/AbdulstarKousa/PythonNotes/blob/main/Tutorials/PythonTutorial.ipynb"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Python Tutorial</span></a></li>
+<li><a class="notebook-link" href="https://github.com/AbdulstarKousa/PythonNotes/blob/main/Tutorials/PandasTutorial.ipynb"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Pandas Tutorial</span></a></li>
+<li><a class="notebook-link" href="https://github.com/AbdulstarKousa/PythonNotes/blob/main/Tutorials/GitTutorial.ipynb"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>Git Tutorial</span></a></li>
+</ul>
+</section>
+</div>
+<a class="article-back" href="../index.html#writing">&larr; Back to writing</a>
+</article>
+</main>
+<footer class="site-footer" id="contact"><div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a></div>
+</div></footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>
