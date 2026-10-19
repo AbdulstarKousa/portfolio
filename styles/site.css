@@ -349,6 +349,9 @@ span.project-link { color: var(--muted); }
 }
 
 .contact-buttons .button { gap: 8px; }
+.about-hero .quick-facts { align-items: center; }
+.about-hero .cv-download { min-height: 30px; padding: 4px 10px; border-radius: 999px; font-size: .72rem; gap: 5px; }
+.about-hero .cv-download .social-icon { width: 13px; height: 13px; }
 
 .resource-panel .resource-button { gap: 8px; min-height: 46px; font-size: .9rem; font-weight: 700; flex-shrink: 0; }
 
