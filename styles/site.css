@@ -356,7 +356,7 @@ span.project-link { color: var(--muted); }
 .resource-panel .resource-button { gap: 8px; min-height: 46px; font-size: .9rem; font-weight: 700; flex-shrink: 0; }
 
 /* Latest additions: a compact update log. */
-.latest-list { list-style: none; padding: 0; margin: 0; }
+.latest-list { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
 .latest-entry { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .latest-type { font-size: .8rem; font-weight: 600; color: var(--muted); }
 .latest-status { display: block; font-size: .75rem; font-weight: 400; margin-top: 4px; }
