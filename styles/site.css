@@ -270,7 +270,13 @@
 .article-resources p, .article-resources li { font-size: .93rem; }
 .article-resources ul { padding-left: 20px; margin-bottom: 0; }
 .article-back { display: block; margin-top: 32px; padding-block: 24px; border-top: 1px solid var(--line); font-size: .89rem; font-weight: 700; }
-@media (max-width: 480px) { .navigation { flex-wrap: wrap; padding-block: 16px; gap: 12px; } .nav-links { flex-wrap: wrap; } }
+@media (max-width: 540px) {
+ .navigation { flex-wrap: nowrap; min-height: 64px; padding-block: 10px; gap: 12px; }
+ .site-header .brand-name { display: none; }
+ .brand-mark { width: 44px; height: 32px; }
+ .nav-links { flex-wrap: nowrap; gap: clamp(10px, 3vw, 16px); font-size: .8rem; }
+ .nav-links a { display: inline-flex; align-items: center; min-height: 44px; }
+}
 /* Centered homepage introduction */
 .home-hero { display: flex; flex-direction: column; gap: 0; text-align: center; padding-block: clamp(56px, 8vw, 100px); }
 .home-hero .portrait { width: clamp(150px, 24vw, 220px); margin: 0 auto 32px; border-radius: 50%; box-shadow: none; }
