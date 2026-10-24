@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
+<meta name="description" content="How models, tools, context management, and validation fit together in an agentic coding workflow.">
+<meta property="og:type" content="article"><meta property="og:title" content="The architecture of agentic coding | Abdul Kousa">
+<meta property="og:description" content="How models, tools, context management, and validation fit together in an agentic coding workflow.">
+<link rel="canonical" href="https://www.abdulkousa.com/html/the-architecture-of-agentic-coding.html">
+<link rel="icon" href="../images/abdul-kousa-logo.png" type="image/png"/>
+<link rel="stylesheet" href="../styles/site.css?v=blue-links-2">
+<title>The architecture of agentic coding | Abdul Kousa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<meta property="og:image" content="https://www.abdulkousa.com/images/abdul-kousa-cover.jpg"/>
+<meta property="og:image:type" content="image/jpeg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Abdul Kousa, AI &amp; Data Consultant"/>
+<meta property="og:site_name" content="Abdul Kousa"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.abdulkousa.com/images/abdul-kousa-cover.jpg"/>
+<meta name="twitter:image:alt" content="Abdul Kousa, AI &amp; Data Consultant"/>
+<meta property="og:url" content="https://www.abdulkousa.com/html/the-architecture-of-agentic-coding.html"/>
+</head><body><header class="site-header"><nav class="container navigation" aria-label="Main navigation">
+  <a href="../index.html" class="logo" aria-label="Abdul Kousa home"><img class="brand-mark" src="../images/abdul-kousa-logo.png" alt="" width="58" height="40"/><span class="brand-name">Abdul Kousa<span>.</span></span></a>
+  <div class="nav-links"><a href="../index.html#work">Projects</a><a href="../index.html#writing" aria-current="page">Writing</a><a href="../about.html">About</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main class="container article-reading">
+<div class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html#writing">Writing</a><span class="sep" aria-hidden="true">/</span>The architecture of agentic coding</div>
+<article aria-labelledby="article-title">
+<header>
+<p class="eyebrow">Writing &middot; Applied AI</p>
+<h1 id="article-title">The architecture of agentic coding</h1>
+<p class="article-subtitle">The model, the tools, and the engineering judgment that holds the workflow together.</p>
+<p class="writing-meta">By Abdul Kousa &middot; <time datetime="2026-10-24">24 October 2026</time> &middot; 6 min read &middot; Experience sharing</p>
+</header>
+<div class="article-body">
+<p>Many of us started using AI to explain a function, suggest a snippet, or troubleshoot an error. Coding agents extend that interaction: they can inspect a repository, edit files, run tests, and use the results to decide what to do next.</p>
+<p>While exploring these tools, I found it useful to separate the model from the software around it. Where does its information come from? What actually runs the commands? And how do we know the result is correct? Those distinctions make an agent much easier to direct.</p>
+<h2>The LLM is the mind</h2>
+<p class="article-lesson"><strong>What is an LLM?</strong> A large language model generates outputs from the context it receives. Think of it as the system's mind: it interprets instructions, works through problems, and proposes responses or actions.</p>
+<p>Its learned parameters generally stay fixed during a normal session. In that sense, its training is frozen in time. It does not automatically know today's news or a library released yesterday, and it cannot access your files or browse the internet by itself.</p>
+<p>Training a large model is expensive. For fresh information, we usually supply relevant context rather than update its weights. The model can use a new API guide immediately when it is included in the request; that does not mean the conversation has retrained it.</p>
+<h2>Context gives it something to work with</h2>
+<p>For a coding task, context might include your instructions, source files, repository conventions, a traceback, and previous tool results. The quality of that information shapes the next decision.</p>
+<p><strong>Retrieval-augmented generation (RAG)</strong> retrieves relevant material from an external source and includes it in the model's input. An internal documentation search is one example. Pasting an error message also adds useful context, although that alone is not a retrieval pipeline.</p>
+<p>The distinction I find most useful is simple: training shapes what the model has learned; context supplies what it needs for the current task. Retrieved information still needs checking for relevance, accuracy, and the correct software version.</p>
+<h2>Tools give it hands and legs</h2>
+<p>A model can write a shell command or draft an email. Executing that command or sending the message requires connected software. If the LLM is the mind, tools are its hands and legs: they let the system read files, search documentation, run tests, or interact with authorised services.</p>
+<p>The <strong>harness</strong> is the surrounding software that exposes those tools, executes permitted requests, and returns results. It also manages state and execution boundaries. The model proposes an action; the harness provides the mechanism for carrying it out.</p>
+<p class="article-lesson"><strong>What is an AI agent?</strong> An AI agent can pursue a goal by choosing actions, using tools, observing results, and adapting its next steps. In coding agents, an LLM typically guides this loop.</p>
+<pre><code>User goal + relevant context
+             ↓
+LLM proposes an action
+             ↓
+Harness checks permissions and runs the tool
+             ↓
+Result returns as context
+             ↓
+LLM chooses the next step, or stops</code></pre>
+<p>Connecting a tool is one building block. The feedback loop allows an agent to adapt as it learns more about the task. <a href="https://www.anthropic.com/research/building-effective-agents">Anthropic's guide to building agents</a> describes this distinction in more detail.</p>
+<h2>Give it a task you can evaluate</h2>
+<p>Consider a Python application with failing transaction-validation tests. I would give the agent a goal with clear boundaries:</p>
+<blockquote><p>Investigate the failing transaction validation tests. Identify the cause, implement the smallest appropriate fix, and add a regression test if needed. Avoid unrelated refactoring. Run the relevant checks and report any remaining failures.</p></blockquote>
+<p>The agent can inspect the working tree and reproduce the failure:</p>
+<pre><code>git status
+uv run pytest tests/test_transactions.py</code></pre>
+<p>Suppose it finds that a recent change assumes every transaction has an account balance. That identifies an implementation issue, but the correct handling of a missing balance is still a business requirement. The agent should find that rule in the specification or ask for clarification.</p>
+<p>Once the expected behaviour is clear, it can make a focused change, add a meaningful regression test, and rerun the checks. The final report should explain what changed, what passed, and what remains untested.</p>
+<p class="article-lesson"><strong>The lesson:</strong> A test result is evidence. A confident explanation is not. Evaluate whether the checks cover the behaviour you actually care about.</p>
+<h2>Make project knowledge reusable</h2>
+<p>Repeatedly explaining the same conventions wastes time and creates inconsistencies. Several mechanisms help, each with a different purpose:</p>
+<ul>
+<li><strong>Project instructions:</strong> Files such as <code>AGENTS.md</code> or <code>CLAUDE.md</code> describe repository conventions, test commands, and boundaries. Loading rules depend on the coding tool.</li>
+<li><strong>Skills:</strong> Reusable procedures for tasks such as reviewing a pull request or validating a pipeline. They can be loaded when needed.</li>
+<li><strong>MCP:</strong> The <a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol</a> connects compatible applications to external tools and information. The application still controls permissions and execution.</li>
+<li><strong>Subagents:</strong> Additional agents can investigate a bounded question or review a change, then return focused findings to the main workflow.</li>
+</ul>
+<p>Parallel agents are useful when the tasks are independent and the results can be evaluated. Git worktrees give them separate working directories, but coordinating design decisions and integrating their work still takes care.</p>
+<h2>Keep context useful as the work grows</h2>
+<p>A long debugging session accumulates failed approaches, command output, and outdated assumptions. More context can make the important requirements harder to find.</p>
+<ul>
+<li><strong>Start fresh</strong> when moving to an unrelated task.</li>
+<li><strong>Compact</strong> a long session into its goal, constraints, decisions, changes, and remaining work. Preserve critical details in project files because summaries can lose information.</li>
+<li><strong>Rewind or branch</strong> when an approach goes wrong, if the tool supports it. Check the files separately: rewinding a conversation may not undo edits.</li>
+</ul>
+<p class="article-lesson"><strong>The lesson:</strong> Keep the context needed for the next useful decision. The entire history does not have to travel with every request.</p>
+<h2>Know when to stop the loop</h2>
+<p>An agent can make a problem harder by repeatedly fixing the latest symptom. If the diff grows while the evidence gets weaker, stop and inspect the changes. Return to the original failure, preserve useful work, and restart with a narrower hypothesis.</p>
+<p>Tool access should match the task. Local edits and tests can run within a constrained workspace; sensitive data access, destructive operations, and production deployments need controls suited to their consequences.</p>
+<p>My view is that understanding the architecture becomes more valuable as the amount of generated code grows. The agent can do much of the investigation and implementation. The engineer still needs to judge whether the solution addresses the right problem, fits the system, and has enough evidence behind it.</p>
+<blockquote><p>Set the intent. Let the agent execute. Govern the quality and the risk.</p></blockquote>
+<section class="article-resources" aria-labelledby="resources-title">
+<h2 id="resources-title">Further learning</h2>
+<ul>
+<li><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic: Building Effective Agents</a></li>
+<li><a href="https://missing.csail.mit.edu/2026/agentic-coding/">MIT Missing Semester: Agentic Coding</a></li>
+<li><a href="https://github.com/Mortenivollen/ai-agents-for-beginners">AI Agents for Beginners</a></li>
+<li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">Introduction to MCP</a></li>
+</ul></section>
+</div>
+<a class="article-back" href="../index.html#writing">&larr; Back to writing</a>
+</article>
+</main>
+<footer class="site-footer" id="contact"><div class="container footer-inner">
+<p>© <span id="year">2026</span> Abdul Kousa · Copenhagen, Denmark</p>
+<div class="footer-links"><a href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email &#8599;</span></a>
+<a href="https://www.linkedin.com/in/abdul-kousa/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
+<a href="https://github.com/AbdulstarKousa" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub &#8599;</span></a></div>
+</div></footer><script>document.getElementById('year').textContent = new Date().getFullYear();</script></body></html>
