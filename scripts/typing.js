@@ -3,10 +3,9 @@
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (!target) return;
   const phrases = [
-    'Passionate about data',
-    'Analyzing trends',
-    'Building models',
-    'Connecting tech with business needs.'
+    'Building AI & data solutions',
+    'Connecting tech with finance',
+    'Solving business problems',
   ];
   let phrase = 0;
   let length = phrases[0].length;

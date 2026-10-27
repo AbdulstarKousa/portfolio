@@ -34,10 +34,10 @@
 <nav aria-label="Main navigation" class="container navigation">
 <a aria-label="Abdul Kousa home" class="logo" href="index.html"><img class="brand-mark" src="images/abdul-kousa-logo.png" alt="" width="58" height="40"/><span class="brand-name">Abdul Kousa<span>.</span></span></a>
 <div class="nav-links">
-<a href="#work">Projects</a>
-<a href="#writing">Writing</a>
+<a href="projects.html">Projects</a>
+<a href="writing.html">Writing</a>
 <a href="about.html">About</a>
-<a href="#contact">Contact</a>
+
 </div>
 </nav>
 </header>
@@ -45,41 +45,23 @@
 <section aria-labelledby="intro-title" class="container hero home-hero">
 <img alt="Portrait of Abdul Kousa" class="portrait" fetchpriority="high" height="320" src="images/abdul-kousa-casual.png" width="320"/>
 <h1 id="intro-title">Abdul Kousa <span class="welcome-tag">AI &amp; Data Consultant</span></h1>
+<p class="professional-role">Senior Consultant at EY &middot; Copenhagen, Denmark</p>
 <div class="typing-container">
-<p class="typing-text" aria-hidden="true"><span id="typing-text">Passionate about data</span><span class="typing-cursor">|</span></p>
-<p class="sr-only">Passionate about data. Analyzing trends. Building models. Connecting tech with business needs.</p>
+<p class="typing-text" aria-hidden="true"><span id="typing-text">Building AI &amp; data solutions</span><span class="typing-cursor">|</span></p>
+<p class="sr-only">Building AI &amp; data solutions. Connecting tech with finance. Solving business problems.</p>
 </div>
 </section>
 <section aria-labelledby="latest-title" class="container section" id="latest">
 <div class="section-heading">
-<h2 id="latest-title">Latest</h2>
-<p>New projects and articles, as they're added.</p>
+<h2 id="latest-title">Recent</h2>
 </div>
 <ul class="latest-list">
-<li class="latest-entry">
-<span class="latest-type">Project <span class="latest-status">Coming soon</span></span>
-<div>
-<h3><a href="#finance-project">Personal Finance &amp; Investment Analytics <span aria-hidden="true">&rarr;</span></a></h3>
-<p>A personal platform for investment tracking and AI-assisted insights.</p>
-</div>
-</li>
-<li class="latest-entry"><span class="latest-type">Article <time class="latest-status" datetime="2026-10-24">24 October 2026</time></span><div><h3><a href="html/the-architecture-of-agentic-coding.html">The architecture of agentic coding <span aria-hidden="true">&rarr;</span></a></h3><p>How models, tools, context management, and validation fit together in an agentic coding workflow.</p></div></li>
-<li class="latest-entry"><span class="latest-type">Article <time class="latest-status" datetime="2026-10-24">24 October 2026</time></span><div><h3><a href="html/reducing-engineering-friction.html">Reducing engineering friction <span aria-hidden="true">&rarr;</span></a></h3><p>A practical guide to Python setup with uv, version control with Git, and automation that reduces engineering friction.</p></div></li>
-
-<li class="latest-entry">
-<span class="latest-type">Article <time class="latest-status" datetime="2026-10-19">19 October 2026</time></span>
-<div>
-<h3><a href="html/beyond-the-notebook-python-pandas-git.html">Lessons from Python, Pandas, and Git <span aria-hidden="true">&rarr;</span></a></h3>
-<p>Three lessons about writing understandable code, trusting data, and building things that others can maintain.</p>
-</div>
-</li>
+<li class="latest-entry"><span class="latest-type">Writing <time class="latest-status" datetime="2026-06-12">12 June 2026</time></span><div><h3><a href="html/the-architecture-of-agentic-coding.html">The architecture of agentic coding <span aria-hidden="true">&rarr;</span></a></h3><p>How models, tools, context management, and validation fit together in an agentic coding workflow.</p></div></li>
+<li class="latest-entry"><span class="latest-type">Writing <time class="latest-status" datetime="2026-05-29">29 May 2026</time></span><div><h3><a href="html/reducing-engineering-friction.html">Building Better Python Workflows <span aria-hidden="true">&rarr;</span></a></h3><p>A practical guide to Python setup with uv, version control with Git, and automation that reduces engineering friction.</p></div></li>
 </ul>
 </section>
-<section aria-labelledby="work-title" class="container section" id="work">
-<div class="section-heading">
-<h2 id="work-title">Selected projects</h2>
-<p>A mix of personal and academic projects.</p>
-</div>
+<section aria-labelledby="featured-title" class="container section" id="featured">
+<div class="section-heading"><h2 id="featured-title">Selected projects</h2><p>A mix of personal and academic projects.</p></div>
 <div class="work-grid">
 <article class="work-card" id="finance-project">
 <div aria-label="Abstract financial analytics project illustration" class="work-visual project-private" role="img">
@@ -87,98 +69,68 @@
 <span class="sub">Personal project &middot; In progress</span>
 </div>
 <div class="work-content">
-<div class="project-kicker">Financial analytics · coming soon</div>
+<p class="project-kicker">Project &middot; Personal</p>
+
 <h3>Personal Finance &amp; Investment Analytics</h3>
 <p>Building a personal platform for monitoring investments, organising financial data and exploring AI-assisted insights. A public case study is in preparation.</p>
-<span class="project-link">Case study coming soon</span>
+<p class="project-meta">In progress &middot; Personal project</p>
 </div>
 </article>
-</div>
-<div class="section-heading academic-projects-heading">
-<h2 id="academic-projects-title">Academic projects</h2>
-</div>
-<div class="work-grid" aria-labelledby="academic-projects-title">
+
 <article class="work-card">
 <img alt="Smartphone usage forecasting project visual" class="work-visual" loading="lazy" src="images/smartphone-app-usage-forecasting.png"/>
 <div class="work-content">
-<div class="project-kicker">Master's thesis · 2022</div>
-<h3>Forecasting Smartphone App Usage</h3>
+<p class="project-kicker">Project &middot; Academic</p>
+
+<h3><a class="project-title-link" href="html/project1.html">Forecasting Smartphone App Usage</a></h3>
 <p>Built a multivariate time-series deep learning model using behavioural data from more than 12,000 users to forecast app usage.</p>
-<a class="project-link" href="html/project1.html">Read case study →</a>
+<p class="project-meta">2022 &middot; Master's thesis &middot; Deep Learning &middot; Attention Models</p>
 </div>
 </article>
 <article class="work-card">
 <img alt="IMDb sentiment classification project visual" class="work-visual" loading="lazy" src="images/imdb-sentiment-classification.png"/>
 <div class="work-content">
-<div class="project-kicker">NLP &amp; MLOps · 2022</div>
-<h3>IMDb Sentiment Classifier</h3>
+<p class="project-kicker">Project &middot; Academic</p>
+
+<h3><a class="project-title-link" href="html/project3.html">IMDb Sentiment Classifier</a></h3>
 <p>Used BERT and Hugging Face Transformers to classify film-review sentiment, with attention to the model development workflow.</p>
-<a class="project-link" href="html/project3.html">Read case study →</a>
+<p class="project-meta">2022 &middot; NLP &amp; MLOps</p>
 </div>
 </article>
-<article class="work-card">
-<img alt="Mobile app behaviour analysis project visual" class="work-visual" loading="lazy" src="images/mobile-app-behaviour-analysis.png"/>
-<div class="work-content">
-<div class="project-kicker">Time series · 2022</div>
-<h3>Understanding Changes in Mobile App Usage</h3>
-<p>Analysed smartphone behaviour and compared forecasting methods to understand trends and changes in app usage.</p>
-<a class="project-link" href="html/project2.html">Read case study →</a>
+
+
+
 </div>
-</article>
-<article class="work-card">
-<img alt="Deep learning image colorization project visual" class="work-visual" loading="lazy" src="images/deep-learning-image-colorization.png"/>
-<div class="work-content">
-<div class="project-kicker">Computer Vision &middot; 2021</div>
-<h3>Deep Learning Image Colorization</h3>
-<p>Explored neural network architectures for turning grayscale images into plausible colour images, comparing reconstruction quality and perceptual similarity.</p>
-<a class="project-link" href="html/project5.html">Read case study &rarr;</a>
-</div>
-</article>
-<article class="work-card">
-<img alt="New York City car collision prediction project visual" class="work-visual" loading="lazy" src="images/new-york-city-collision-analysis.png"/>
-<div class="work-content">
-<div class="project-kicker">Machine Learning &middot; 2021</div>
-<h3>New York City Car Collision Prediction</h3>
-<p>Combined collision records, weather and speed-limit data to explore road safety patterns and model accident severity.</p>
-<a class="project-link" href="html/project4.html">Read case study &rarr;</a>
-</div>
-</article>
+<div class="section-more">
+  <a class="section-more-link" href="projects.html">
+    All projects <span aria-hidden="true">&rarr;</span>
+  </a>
 </div>
 </section>
-<section aria-labelledby="writing-title" class="container section" id="writing">
-<div class="section-heading">
-<h2 id="writing-title">Writing</h2>
-<p>Thoughts on AI, data and putting ideas into practice.</p>
-</div>
+<section aria-labelledby="selected-writing-title" class="container section" id="writing">
+<div class="section-heading"><h2 id="selected-writing-title">Selected Writing</h2><p>Thoughts on AI, data and putting ideas into practice.</p></div>
 <article class="writing-card">
-<p class="project-kicker">Writing &middot; Applied AI</p>
+<p class="project-kicker">Writing &middot; Experience sharing</p>
 <h3><a href="html/the-architecture-of-agentic-coding.html">The architecture of agentic coding</a></h3>
 <p>How models, tools, context management, and validation fit together in an agentic coding workflow.</p>
-<p class="writing-meta"><time datetime="2026-10-24">24 October 2026</time> &middot; 6 min read &middot; Experience sharing</p>
+<p class="writing-meta"><time datetime="2026-06-12">12 June 2026</time> &middot; 6 min read &middot; Applied AI</p>
 </article>
 <article class="writing-card">
-<p class="project-kicker">Writing &middot; Engineering workflows</p>
-<h3><a href="html/reducing-engineering-friction.html">Reducing engineering friction</a></h3>
+<p class="project-kicker">Writing &middot; Experience sharing</p>
+<h3><a href="html/reducing-engineering-friction.html">Building Better Python Workflows</a></h3>
 <p>A practical guide to Python setup with uv, version control with Git, and automation that reduces engineering friction.</p>
-<p class="writing-meta"><time datetime="2026-10-24">24 October 2026</time> &middot; 6 min read &middot; Experience sharing</p>
+<p class="writing-meta"><time datetime="2026-05-29">29 May 2026</time> &middot; 6 min read &middot; Engineering workflows</p>
 </article>
 <article class="writing-card">
-<p class="project-kicker">Writing &middot; Engineering reflections</p>
+<p class="project-kicker">Writing &middot; Experience sharing</p>
 <h3><a href="html/beyond-the-notebook-python-pandas-git.html">Lessons from Python, Pandas, and Git</a></h3>
 <p>Three lessons about writing understandable code, trusting data, and building things that others can maintain.</p>
-<p class="writing-meta"><time datetime="2026-10-19">19 October 2026</time> &middot; 5 min read &middot; Experience sharing</p>
+<p class="writing-meta"><time datetime="2024-09-26">26 Sep 2024</time> &middot; 5 min read &middot; Engineering reflections</p>
 </article>
-</section>
-<section aria-labelledby="contact-heading" class="container section" id="contact">
-<div class="contact-panel">
-<div>
-<h2 id="contact-heading">Let's connect.</h2>
-<p>Interested in exchanging ideas on applied AI, data engineering or building useful technology?</p>
-</div>
-<div class="contact-buttons">
-<a class="button" href="mailto:abdul.kousa@gmail.com"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email me &#8599;</span></a>
-<a class="button button-secondary" href="https://www.linkedin.com/in/abdul-kousa/" rel="noopener noreferrer" target="_blank"><svg class="social-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.51v5.26Z"/></svg><span>LinkedIn &#8599;</span></a>
-</div>
+<div class="section-more">
+  <a class="section-more-link" href="writing.html">
+    All writing <span aria-hidden="true">&rarr;</span>
+  </a>
 </div>
 </section>
 </main>
