@@ -467,3 +467,14 @@ a.project-link:hover, a.project-link:focus-visible, .work-card:has(.project-link
 .finance-visual-type em { color: #f5f5f5; letter-spacing: -.055em; padding-right: 0; }
 .finance-signature { color: #ddd; font-family: Georgia, 'Times New Roman', serif; font-size: 1.3rem; font-style: italic; line-height: 1; letter-spacing: -.09em; }
 .finance-visual-bottom { justify-content: space-between; }
+
+/* Simple contact rows beneath the introduction. */
+.contact-links { display: grid; gap: 12px; margin-top: 24px; }
+.contact-link { display: flex; align-items: center; gap: 12px; width: fit-content; max-width: 100%; color: #000; font-size: .95rem; font-weight: 600; text-decoration: none; }
+.contact-link:hover, .contact-link:focus-visible { color: var(--link); }
+.contact-link span { min-width: 0; overflow-wrap: anywhere; }
+.contact-link:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.contact-link .social-icon { flex-shrink: 0; width: 20px; height: 20px; }
+@media print {
+ #contact { break-inside: avoid; }
+}
