@@ -384,7 +384,7 @@ span.project-link { color: var(--muted); }
 #finance-project { scroll-margin-top: 24px; }
 @media (max-width: 600px) { .latest-entry { grid-template-columns: 1fr; gap: 12px; padding: 20px; } .latest-status { display: inline; margin-left: 10px; } }
 
-/* Simple links to the full project and writing collections. */
+/* Prominent actions to the full project and writing collections. */
 .section-more {
   text-align: right;
   margin-top: 1.5rem;
@@ -393,27 +393,33 @@ span.project-link { color: var(--muted); }
 .section-more-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #2563eb;
-  font-size: 0.9rem;
-  font-weight: 600;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: background 0.2s ease;
 }
 
-.section-more-link:hover {
-  opacity: 0.7;
+.section-more-link:hover,
+.section-more-link:focus-visible {
+  background: var(--link);
+  color: #fff;
 }
 
 .section-more-link:focus-visible {
-  outline: 2px solid currentColor;
+  outline: 3px solid var(--link);
   outline-offset: 4px;
-  border-radius: 2px;
 }
 
 @media (max-width: 600px) {
   .section-more-link {
-    font-size: 0.875rem;
+    width: 100%;
   }
 }
 .home-hero .professional-role { margin: 0 0 20px; color: var(--muted); font-size: .95rem; line-height: 1.6; }
