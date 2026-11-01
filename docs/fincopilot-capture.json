@@ -1,0 +1,35 @@
+{
+  "household": "reconciled generated ledger, seed 73; no private data copied",
+  "review_month": "2026-10",
+  "holdings": {
+    "core": "IWDA.AS",
+    "tactical": "HEAL.AS"
+  },
+  "trades": "fictional dates and allocations, executed at the matching public closing price",
+  "review_checks": {
+    "salary": 26000.0,
+    "expense": -21018.03,
+    "generated": 4981.969999999994
+  },
+  "markets": {
+    "CL=F": "2026-10-30",
+    "DKK=X": "2026-11-01",
+    "EUNL.DE": "2026-10-30",
+    "EURDKK=X": "2026-11-01",
+    "GC=F": "2026-10-30",
+    "HEAL.AS": "2026-10-30",
+    "IQQ0.DE": "2026-10-30",
+    "IS0E.DE": "2026-10-30",
+    "RBOE.AS": "2026-10-30",
+    "USDDKK=X": "2026-11-01",
+    "VWCE.DE": "2026-10-30",
+    "^GSPC": "2026-10-30",
+    "^TNX": "2026-10-30",
+    "^VIX": "2026-10-30",
+    "IWDA.AS": "2026-10-30"
+  },
+  "briefing_and_chat": "scripted; no AI provider called",
+  "captured_on": "2026-11-01",
+  "seed": 73,
+  "source": "FinCopilot rendered with generated household records and public market prices"
+}

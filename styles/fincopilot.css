@@ -1,0 +1,39 @@
+/* The real app screenshots anchor the walkthrough; all rules stay on this page. */
+.fincopilot-reading .case-hero { gap: 8px; }
+.fincopilot-reading .case-hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); margin: 4px 0 12px; }
+.fincopilot-reading .case-lead { max-width: 650px; font-size: 1.15rem; }
+.fincopilot-reading .case-intro { max-width: 650px; }
+.demo-nav { display: flex; flex-wrap: wrap; gap: 10px 22px; padding-block: 18px; border-block: 1px solid var(--line); }
+.demo-nav a { font-size: .85rem; }
+.demo-article > p { max-width: 680px; }
+.demo-article figcaption { max-width: 420px; margin: 16px auto 0; font-size: .8rem; line-height: 1.6; color: var(--muted); }
+.demo-step { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); align-items: start; gap: 0 64px; padding-block: 48px; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
+.demo-step h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); line-height: 1.25; }
+.demo-step-copy { grid-column: 1; }
+.demo-step-copy p { color: var(--muted); }
+.demo-step-copy .eyebrow { color: #21684b; font-size: .72rem; }
+.demo-screen { margin: 0; }
+.demo-screen img { width: 100%; border-radius: 12px; border: 1px solid #25392e; }
+.demo-crop { aspect-ratio: 860 / var(--crop-height); overflow: hidden; border: 1px solid #25392e; border-radius: 12px; background: #0b1519; }
+.demo-crop img { height: 100%; object-fit: cover; object-position: center var(--crop-position, top); border: 0; border-radius: 0; }
+.demo-crop-end img { object-position: center var(--crop-position, bottom); }
+.demo-capture { overflow: hidden; border: 1px solid #25392e; border-radius: 12px; }
+.demo-capture .demo-crop { border: 0; border-radius: 0; }
+.demo-capture-tactical { background: #0b1418; }
+.demo-capture-tactical img { border: 0; border-radius: 0; }
+.demo-capture-tactical .demo-tactical-footer { width: calc(100% - 24px); margin: 12px auto; }
+.demo-capture-chat { background: #17282e; }
+.demo-capture-chat > .demo-crop:first-child { margin-bottom: 72px; }
+.demo-step > .demo-screen, .demo-screen-group { grid-column: 2; min-width: 0; }
+.demo-extra { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
+.demo-extra summary { cursor: pointer; font-size: .85rem; line-height: 1.6; }
+.demo-extra summary:focus-visible { outline: 2px solid #21684b; outline-offset: 5px; }
+.demo-extra[open] summary { margin-bottom: 20px; }
+.fincopilot-reading .case-next { padding-bottom: 40px; }
+@media (max-width: 650px) {
+  .demo-step { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 32px; }
+  .demo-step > .demo-screen, .demo-screen-group { grid-column: 1; width: min(100%, 340px); justify-self: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.fincopilot-reading) { scroll-behavior: auto; }
+}
