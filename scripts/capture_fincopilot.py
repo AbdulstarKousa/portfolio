@@ -63,6 +63,10 @@ def configure_household():
         p = WORK / name
         text = p.read_text(encoding='utf-8').replace("greet + ', Abdul'", "'Synthetic household'").replace('VWCE.DE', 'IWDA.AS')
         p.write_text(text, encoding='utf-8')
+    # Rename the displayed tab while preserving the app's internal callback IDs.
+    for name in ('src/app/layout.py', 'src/app/layouts/decision.py'):
+        p = WORK / name
+        p.write_text(p.read_text(encoding='utf-8').replace('"Decision"', '"Plan"').replace("'Decision'", "'Plan'"), encoding='utf-8')
 
 
 def household_fixtures(prices, asof):
@@ -235,6 +239,7 @@ def serve():
                for day, value in zip(markers.x, markers.y)), 'Trade markers must lie on the market-price line'
     assert position.get_monthly_return_trend(6), 'The portfolio sparkline needs actual synthetic-position history'
     receipt = {'household': 'reconciled generated ledger, seed 73; no private data copied', 'review_month': review_month,
+               'plan_month': str(asof.to_period('M')), 'allocation_tab': 'Plan',
                'holdings': {'core': 'IWDA.AS', 'tactical': 'HEAL.AS'},
                'trades': 'fictional dates and allocations, executed at the matching public closing price',
                'review_checks': {'salary': float(review_row['income']), 'expense': float(review_row['expense']), 'generated': float(review_row['nwc'])},
@@ -244,7 +249,7 @@ def serve():
     app.run_server(host='127.0.0.1', port=PORT, debug=False, use_reloader=False)
 
 
-def capture():
+def capture(tabs=None):
     from playwright.sync_api import sync_playwright
     OUTPUT.mkdir(parents=True, exist_ok=True)
     with (WORK / 'server.log').open('w', encoding='utf-8') as log:
@@ -275,7 +280,7 @@ def capture():
                     .fc-chat-messages { min-height:360px !important; }
                     body { min-height:0 !important; }
                 ''')
-                for tab in ('Overview', 'Review', 'Forecast', 'Invest', 'Tactical', 'Decision', 'FinCopilot'):
+                for tab in tabs or ('Overview', 'Review', 'Forecast', 'Invest', 'Tactical', 'Plan', 'FinCopilot'):
                     page.locator('#tabs-dropdown .Select-control').click()
                     page.locator('#tabs-dropdown .Select-menu-outer').get_by_text(tab, exact=True).click()
                     page.wait_for_timeout(2500)
@@ -307,7 +312,8 @@ def capture():
                         pick = page.locator('.tactical-control-row').bounding_box()
                         assert chart and pick
                         page.screenshot(path=str(OUTPUT / 'tactical.png'), full_page=True, clip={'x':0,'y':0,'width':430,'height':pick['y']-12})
-                        page.screenshot(path=str(OUTPUT / 'tactical-detail.png'), full_page=True, clip={'x':0,'y':pick['y'],'width':430,'height':chart['y']+chart['height']-pick['y']+10})
+                        detail_top = max(0, pick['y'] - 24)
+                        page.screenshot(path=str(OUTPUT / 'tactical-detail.png'), full_page=True, clip={'x':0,'y':detail_top,'width':430,'height':chart['y']+chart['height']-detail_top+20})
                     else:
                         if tab == 'FinCopilot':
                             page.evaluate('document.activeElement.blur();window.scrollTo(0,0)')
@@ -335,10 +341,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path)
     parser.add_argument('--serve', action='store_true')
+    parser.add_argument('--tab', action='append', choices=('Overview', 'Review', 'Forecast', 'Invest', 'Tactical', 'Plan', 'FinCopilot'), help='Recapture selected tabs only; repeat to select more than one.')
     args = parser.parse_args()
     if args.serve:
         serve()
     else:
         if args.source:
             prepare(args.source.resolve())
-        capture()
+        capture(args.tab)

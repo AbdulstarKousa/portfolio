@@ -3,7 +3,6 @@
 .fincopilot-reading .case-hero h1 { font-size: clamp(2.3rem, 6vw, 4rem); margin: 4px 0 12px; }
 .fincopilot-reading .case-lead { max-width: 650px; font-size: 1.15rem; }
 .fincopilot-reading .case-intro { max-width: 650px; }
-.fincopilot-reading .case-collaborator { font-size: .85rem; color: var(--muted); }
 .demo-nav { display: flex; flex-wrap: wrap; gap: 10px 22px; padding-block: 18px; border-block: 1px solid var(--line); }
 .demo-nav a { font-size: .85rem; }
 .demo-article > p { max-width: 680px; }

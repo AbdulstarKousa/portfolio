@@ -31,5 +31,7 @@
   "briefing_and_chat": "scripted; no AI provider called",
   "captured_on": "2026-11-01",
   "seed": 73,
-  "source": "FinCopilot rendered with generated household records and public market prices"
+  "source": "FinCopilot rendered with generated household records and public market prices",
+  "plan_month": "2026-11",
+  "allocation_tab": "Plan"
 }
